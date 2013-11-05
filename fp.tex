@@ -20,6 +20,8 @@
 \usepackage[table]{xcolor}
 \usepackage{booktabs}
 
+\newcommand{\myMail}[1]{\href{mailto:#1}{#1}}
+
 \newcommand{\myImage}[2]{
   \begin{center}
     \begin{minipage}{\linewidth}
@@ -49,12 +51,24 @@
 
     \myDate
 
-    \vspace{2cm}
+    \vspace{1cm}
+    
+    \large\normalfont
+    Versuchsdurchführung am
+
+    \textbf{\exDate}
+    \vspace{1cm}
+    
+    Dozent
+
+    \textbf{\exDoc}
+    
+    
     \myImage{\myTitleImage}{}
   \end{center}
   \vfill
   \enlargethispage{2cm}
-  \parbox[t]{0.45\textwidth}{%
+  \parbox[t]{0.55\textwidth}{%
    \myTitleLeft
   }
   \parbox[t]{0.45\textwidth}{\raggedleft%
