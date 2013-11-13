@@ -22,11 +22,11 @@
 
 \newcommand{\myMail}[1]{\href{mailto:#1}{#1}}
 
-\newcommand{\myImage}[2][\textwidth]{
+\newcommand{\myImage}[2]{
   \begin{center}
     \begin{minipage}{\linewidth}
-      \centering
-      \makebox[0cm]{\includegraphics[width=#3]{#1}}
+      \centering 
+      \makebox[0cm]{\includegraphics[width=\textwidth]{#1}}
     \end{minipage}
     \ifthenelse{ \equal{#2}{}} {
       
