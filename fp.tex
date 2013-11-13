@@ -26,12 +26,13 @@
     \begin{minipage}{\linewidth}
       \centering 
       \makebox[0cm]{\includegraphics[width=#1]{#2}}
-    \end{minipage}
-    \ifthenelse{ \equal{#3}{}} {
+      \ifthenelse{ \equal{#3}{}} {
       
-    } {
-    \captionof{figure}{#3}
-    }
+      } {
+        \captionof{figure}{#3}
+      }
+    \end{minipage}
+   
   \end{center}
 }
 
