@@ -1,9 +1,9 @@
-\documentclass[a4paper, parskip=half]{scrartcl}
+%\documentclass[a4paper, parskip=half]{scrartcl}
 
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[english, ngerman]{babel}
-\usepackage{libertine}
+%\usepackage{libertine}
 \usepackage{xstring}
 \usepackage{amssymb,amstext,amsmath}
 \usepackage{graphicx}
@@ -22,11 +22,11 @@
 
 \newcommand{\myMail}[1]{\href{mailto:#1}{#1}}
 
-\newcommand{\myImage}[2]{
+\newcommand{\myImage}[2][\textwidth]{
   \begin{center}
     \begin{minipage}{\linewidth}
       \centering
-      \makebox[0cm]{\includegraphics[width=\textwidth]{#1}}
+      \makebox[0cm]{\includegraphics[width=#3]{#1}}
     \end{minipage}
     \ifthenelse{ \equal{#2}{}} {
       
