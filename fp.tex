@@ -21,16 +21,16 @@
 
 \newcommand{\myMail}[1]{\href{mailto:#1}{#1}}
 
-\newcommand{\myImage}[2]{
+\newcommand{\myImage}[3][\textwidth]{
   \begin{center}
     \begin{minipage}{\linewidth}
       \centering 
-      \makebox[0cm]{\includegraphics[width=\textwidth]{#1}}
+      \makebox[0cm]{\includegraphics[width=#1]{#2}}
     \end{minipage}
-    \ifthenelse{ \equal{#2}{}} {
+    \ifthenelse{ \equal{#3}{}} {
       
     } {
-    \captionof{figure}{#2}
+    \captionof{figure}{#3}
     }
   \end{center}
 }
@@ -63,7 +63,7 @@
     \textbf{\exDoc}
     
     
-    \myImage{\myTitleImage}{}
+    \myImage[10cm]{\myTitleImage}{}
   \end{center}
   \vfill
   \enlargethispage{2cm}
