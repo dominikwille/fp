@@ -1,3 +1,4 @@
+%\documentclass[a4paper, parskip=half]{scrartcl}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[english, ngerman]{babel}
@@ -23,7 +24,7 @@
 \newcommand{\myImage}[2]{
   \begin{center}
     \begin{minipage}{\linewidth}
-      \centering
+      \centering 
       \makebox[0cm]{\includegraphics[width=\textwidth]{#1}}
     \end{minipage}
     \ifthenelse{ \equal{#2}{}} {
