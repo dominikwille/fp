@@ -40,10 +40,12 @@ bzw. deren Nullstellen kann man Rückschlüsse auf die Kohärenzlänge machen. E
 L = \text{Maximale Weglänge mit Interferenz}
 \end{align}
 
-<<<<<<< HEAD
-\subsection{Holographie}
+\subsection{Transmissionsholographie}
+es gibt sicherlich viele andere Methoden um Hologramme zu erstellen, die sich eigeltlich nur durch den verschienen Lichtweg Unterscheinen. Eine einfache und praktikable variante ist die Transmissionsholographie, die wir kurz erläutern.
 \subsubsection{Abbildung}
-In der Holographie nutzt man eine Photoplatte um ein Interferenzmuster aus der \textit{Objektwelle} $S$ und der \textit{Referenzwelle} $R$ zu speichern, dabei werden nicht nur die Intensitäten sonden auch die Phasen oder Amplituden gespeichert.
+In der Transmissionsholographie nutzt man eine Photoplatte um ein Interferenzmuster aus der \textit{Objektwelle} $S$ und der \textit{Referenzwelle} $R$ zu speichern, indem man Den Lichtweg durch einen halbdurchlässigen Spieleg teilt, und einen Lichtweg auf das Objekt\footnote{Dabei wird das Licht vom Objelt auf die Photopltte reflektiert} und den anderen auf die Photoplatte ausrichtet. Dabei werden nicht nur die Intensitäten sonden auch die Phasen oder Amplituden gespeichert.
+
+\myImage[9cm]{img/trans}{Schema der Transmissionsholographie}
 
 Die Intensität in/auf der Photoplatte ergibt sich aus:
 \begin{align}
@@ -53,9 +55,10 @@ I(\vec{r})    &= \left| E \right|^2 \\
               &= S^2 + R^2 + 2SR\cos \phi \; ; \; \phi = \left(\vec{k}_1 - \vec{k}_2 \right) \cdot \vec{r}
 \end{align}
 \subsubsection{Rekonstruktion}
-Glücklicher Weise erhält man das 
-=======
->>>>>>> af35ae587e7770b88c8ddad445b5b1c6c8c47521
+Glücklicherweise erhält man das Ausgangsbild wieder zurück wenn man Licht der gleichen Wellenlänge einfallen lässt. Für die Amplitude einer Lichtwelle auf die Photoplatte gilt:
+\begin{align}
+E \propto R \cdot \left|S\right|^2 + R \cdot \left|R\right|^2 + S \cdot \left|R\right|^2 + S^* \cdot \left|R\right|^2
+\end{align}
 \newpage
 \subsection{Verwendete Arbeitsmaterialien}
 \begin{itemize}
