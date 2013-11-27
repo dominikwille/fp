@@ -1,1 +1,23 @@
 \subsection*{Aufgabe 6 - Mathematische Behandlung der Informationsspeicherung}
+Für die Aufnahme des Hologramms zur Berechnung der Intensität des auf der Photoplatte auftreffenden Lichts betrachten wir die Welle als Linearkombination aus Referenz und Objektwelle.
+\begin{equation}
+	\Psi(\vec{r},t) = (\underbrace{O\cdot e^{i\vec{k}_O\vec{r}}}_{Objektwelle} + \underbrace{R\cdot e^{i\vec{k}_R\vec{r}}}_{Referenzwelle})\cdot e^{-i\omega t}
+\end{equation}
+Auch hier ergibt sich die Intensität wieder aus dem Absolutquadrat der Wellenfunktion:
+\begin{equation}
+	I(\vec{r}) = \left| \Psi \right|^2 = (O\cdot e^{i\vec{k}_O\vec{r}} + R\cdot e^{i\vec{k}_R\vec{r}})\cdot (O^*\cdot e^{i\vec{k}_O\vec{r}} + R^*\cdot e^{i\vec{k}_R\vec{r}})
+\end{equation}
+Da wir zunächst reelle Amplituden betrachten, erhalten wir so
+\begin{equation}
+	I(\vec{r}) = O^2 + R^2 + OR\cdot e^{i(\vec{k}_O -\vec{k}_R)\vec{r}} + RO \cdot e^{-i(\vec{k}_O -\vec{k}_R)\vec{r}}
+\end{equation}
+Fasst man Amplitude und Phasendifferenz zu einer komplexen Amplitude zusammen, lässt sich kurz schreiben:
+\begin{equation}
+	I(\vec{r}) = \left| O \right|^2 + \left| R \right|^2 + OR^* + RO^*
+\end{equation}
+Zum Auslesen des Hologramms benötigt man wieder - wie zu Beginn erwähnt - den Referenzstrahl. Dieser wird durch die Schwärzung des Films unterschiedlich hindurch gelassen. Da die Transmitivität und Belichtungsintensität linear voneinander abhängen,  überlagern sich die Amplituden der transmitierten / reflektierten Welle und des Referenzstrahls:
+\begin{align}
+	I_{gesamt} &\propto \underbrace{R \cdot \left| O \right|^2}_{\text{I}} + \underbrace{R \cdot \left| R \right|^2}_{\text{II}} + \underbrace{O \cdot \left| R \right|^2}_{\text{I}} + \underbrace{R^2 \cdot O^*}_{\text{I}}\\
+	&= RO^2\cdot e^{i\vec{k}_R\vec{r}} + RR^2\cdot e^{i\vec{k}_R\vec{r}} + OR^2\cdot e^{i\vec{k}_O\vec{r}} + OR^2\cdot e^{i(2\vec{k}_R - \vec{k}_O)\vec{r}}
+\end{align}
+Die ersten beiden Terme ergeben eine modulierte Referenzwelle. Term III enthält Objektamplitude und - phase und damit alle relevanten Informationen über das Bild. Der vierte Term beschreibt ein reelles konjugiertes Bild, welches durch die Konjugation Vorder - und Hintergrund vertauscht hat, und in unserem Fall eine Störung darstellt.
