@@ -12,27 +12,28 @@ def gaus(x,a,x0,sigma):
 x = []
 y = []
 ye = []
-i = 0
-with open('22nacal.Spe', 'rb') as f:
+i = 0.0
+with open('137cskal.Spe', 'rb') as f:
     reader = csv.reader(f)
     for row in reader:
         s = str(row[0]).strip()
         if(s.isdigit()):
-            x.append(i)
+            x.append(i/2.0)
             y.append(int(s))
-            i += 1
+            i += 1.0
 
 x = np.asarray(x)
 y = np.asarray(y)
 
+x_ = x[5400:6800]
+y_ = y[5400:6800]
 
-x_ = x[5200:6100]
-y_ = y[5200:6100]
-
-mean = 6000
-sigma = 250
+mean = 3200
+sigma = 50
 
 popt,pcov = curve_fit(gaus,x_,y_,p0=[1,mean,sigma])
+
+print pcov
 
 d_x0 = pcov[1,1]
 a = popt[0]
