@@ -14,7 +14,7 @@ def lin(x, m, n):
 
 x = []
 y = []
-y_err = []
+x_err = []
 with open('peaks.csv', 'rb') as f:
     reader = csv.reader(f)
     for row in reader:
@@ -25,21 +25,19 @@ with open('peaks.csv', 'rb') as f:
         try:
             x.append(float(s))
             y.append(float(t))
-            y_err.append(float(s))
+            x_err.append(float(u))
         except:
             print row
 
 x[2] = x[2]/2
 x = np.asarray(x)
 y = np.asarray(y)
-y_err = np.asarray(y_err)
-print x
-print y
+x_err = np.asarray(x_err)
 
 mean = 6000
 sigma = 250
 
-# popt,pcov = curve_fit(lin,x,y,p0=[1.0,0])
+popt,pcov = curve_fit(lin,x,y,p0=[1.0,0])
 
 # d_x0 = pcov[1,1]
 # a = popt[0]
@@ -47,15 +45,20 @@ sigma = 250
 # sigma = popt[2]
 
 x_ = range(0,8000)
+x_ = np.asarray(x_)
+text = '$m = ' + str(round(popt[0], 5)) + '\pm' +  str(round(pcov[0,0], 5)) + '$'
+text2 = '$n = ' + str(round(popt[1], 5)) + '\pm' +  str(round(pcov[1,1], 5)) + '$'
+plt.text(2000, 1000, text, horizontalalignment='center')#, verticalalignment='bottom' , rotation='vertical')
+plt.text(2000, 935, text2, horizontalalignment='center')#, verticalalignment='bottom' , rotation='vertical')
 
-# plt.text(x0, a * 1.2 + 27, text, horizontalalignment='center')#, verticalalignment='bottom' , rotation='vertical')
+print popt
 
-plt.errorbar(x, y, xerr=0.1, yerr=0.01)
+plt.errorbar(x, y, xerr=x_err, fmt='+')
 
-# plt.plot(x_,lin(x_,*popt),'r',label='fit')
+plt.plot(x_,lin(x_, popt[0], popt[1]),'r',label='fit')
 plt.xlabel('channel #')
-plt.ylabel('Energy')
-
+plt.ylabel('Energy  [$keV$]')
+plt.ylim([0,2000])
 plt.tight_layout()
 plt.show()
 

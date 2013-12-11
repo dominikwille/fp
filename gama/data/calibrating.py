@@ -36,12 +36,15 @@ popt,pcov = curve_fit(gaus,x_,y_,p0=[1,mean,sigma])
 print pcov
 
 d_x0 = pcov[1,1]
+d_sigma = pcov[2,2]
 a = popt[0]
 x0 = popt[1]
 sigma = popt[2]
 
-text = r'$x_0 =\, ' + str(round(x0, 2)) + '\pm ' + str(round(np.sqrt(d_x0), 2))  + '$'#;\,\, \sigma =' + str(abs(round(sigma, 2))) + '$'
+text = r'$x_0 =\, ' + str(round(x0, 2)) + '\pm ' + str(round(np.sqrt(d_x0), 2))  + '$'
+text2 =  r'$\sigma =\, ' + str(round(abs(sigma), 2)) + '\pm ' + str(round(np.sqrt(d_sigma), 2))  + '$' #;\,\, \sigma =' + str(abs(round(sigma, 2))) + '$'
 plt.text(x0, a * 1.2 + 27, text, horizontalalignment='center')#, verticalalignment='bottom' , rotation='vertical')
+plt.text(x0, a * 1.2 + 50, text2, horizontalalignment='center')#, verticalalignment='bottom' , rotation='vertical')
 
 plt.errorbar(x, y, xerr=0.1, yerr=0.01)
 plt.plot(x_,gaus(x_,*popt),'r',label='fit')
