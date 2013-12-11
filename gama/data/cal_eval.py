@@ -64,4 +64,3 @@ plt.ylabel('Energy  [$keV$]')
 plt.ylim([0,2000])
 plt.tight_layout()
 plt.show()
-
