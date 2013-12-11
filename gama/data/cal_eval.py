@@ -29,7 +29,6 @@ with open('peaks.csv', 'rb') as f:
         except:
             print row
 
-x[2] = x[2]/2
 x = np.asarray(x)
 y = np.asarray(y)
 x_err = np.asarray(x_err)
@@ -39,15 +38,16 @@ sigma = 250
 
 popt,pcov = curve_fit(lin,x,y,p0=[1.0,0])
 
-# d_x0 = pcov[1,1]
-# a = popt[0]
-# x0 = popt[1]
-# sigma = popt[2]
+print pcov
 
 x_ = range(0,8000)
 x_ = np.asarray(x_)
-text = '$m = ' + str(round(popt[0], 5)) + '\pm' +  str(round(pcov[0,0], 5)) + '$'
-text2 = '$n = ' + str(round(popt[1], 5)) + '\pm' +  str(round(pcov[1,1], 5)) + '$'
+
+d_m = np.sqrt(pcov[0,0])
+d_n = np.sqrt(pcov[1,1])
+
+text = '$m = (' + str(round(popt[0], 3)) + '\pm' +  str(round(np.sqrt(pcov[0,0]), 3)) + ')\, keV$'
+text2 = '$n = (' + str(int(round(popt[1], 0))) + '\pm' +  str(int(round(np.sqrt(pcov[1,1]), 0))) + ')\, keV$'
 plt.text(2000, 1000, text, horizontalalignment='center')#, verticalalignment='bottom' , rotation='vertical')
 plt.text(2000, 935, text2, horizontalalignment='center')#, verticalalignment='bottom' , rotation='vertical')
 
@@ -56,6 +56,9 @@ print popt
 plt.errorbar(x, y, xerr=x_err, fmt='+')
 
 plt.plot(x_,lin(x_, popt[0], popt[1]),'r',label='fit')
+plt.plot(x_,lin(x_, popt[0] + d_m, popt[1] + d_n),'r--')
+plt.plot(x_,lin(x_, popt[0] - d_m, popt[1] - d_n),'r--')
+
 plt.xlabel('channel #')
 plt.ylabel('Energy  [$keV$]')
 plt.ylim([0,2000])
