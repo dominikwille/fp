@@ -24,7 +24,7 @@ start = [
     ('241amkal.Spe', 317, 350, 38000, 45000, 1000, True),
     ('60cokal.Spe', 6544, 6611, 90, 200, 9000, True),
     ('60cokal.Spe', 7437, 7500, 70, 200, 9000, True),
-    ('Co_long.Spe', 7437, 7500, 70, 4000, 8000, False),
+    ('Co_long.Spe', 7437, 7500, 70, 2400, 8000, False),
 ]
 
 filename, x_min, x_max, y_max, y_range, x_range, fit = start[14]
