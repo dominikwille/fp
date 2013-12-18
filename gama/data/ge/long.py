@@ -24,10 +24,10 @@ start = [
     ('241amkal.Spe', 317, 350, 38000, 45000, 1000, True),
     ('60cokal.Spe', 6544, 6611, 90, 200, 9000, True),
     ('60cokal.Spe', 7437, 7500, 70, 200, 9000, True),
-    ('Co_long.Spe', 7437, 7500, 70, 4000, 8000, False),
+    ('Co_long.Spe', 7437, 7500, 70, 200, 9000, False),
 ]
 
-filename, x_min, x_max, y_max, y_range, x_range, fit = start[14]
+filename, x_min, x_max, y_max, y_range, x_range, fit = start[12]
 
 x = []
 y = []
@@ -48,12 +48,7 @@ y = np.asarray(y)
 x_ = x[x_min:x_max]
 y_ = y[x_min:x_max]
 
-if(not fit):
-    m = 0.17747
-    x *= m
-    x_range *= m
-
-plt.errorbar(x, y, xerr=0.00044*x, yerr=0.01)
+plt.errorbar(x, y, xerr=0.1, yerr=0.01)
 
 if(fit):
     popt,pcov = curve_fit(gaus,x_,y_,p0=[y_max, (x_max+x_min)/2.0, (x_max-x_min)/2.0])
@@ -75,12 +70,10 @@ if(fit):
     plt.text(x0, y_max + 0.09 * y_range, text3, horizontalalignment='center')
 
     plt.plot(x_,gaus(x_,*popt),'r',label='fit')
-    plt.xlabel('channel #')
-else:
-    plt.xlabel('Energy [keV]')
+
 plt.ylim([0,y_range])
 plt.xlim([0,x_range])
-
+plt.xlabel('channel #')
 plt.ylabel('detected decays')
 
 plt.tight_layout()
