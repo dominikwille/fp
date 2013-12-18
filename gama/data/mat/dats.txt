@@ -1,0 +1,5 @@
+a		ordnungzzahl material
+399.87, 53,	Iod,
+546.39,	52	Te
+143.01,	51,	Sb
+108.24, 50,	Sn
