@@ -7,7 +7,7 @@ In der Physik setzt man Massenspektrometer ein, um Informationen über Isotopenz
 Ein Quadrupol-Massenspektrometer erzeugt ein elektrisches Feld. Je nach stärke der anliegenden Felder und dem Ladungs-/Massenverhältnisses der Ionen, bewegen sie sich auf stabilen oder instabilen Bahnen. Je nach dem, wie man diese Parameter variiert, werden verschiedene Ionen auf stabile Bahnen gebracht und so durch den QMS gelassen. Diesen Filtervorgang nennt man Massenfiltern.\\
 Der Quadrupol-Massenspektrometer befindet sich dabei in einer Vakuum-Kammer (Rezipient) um ungewollte Stöße der Ionen mit anderen Teilchen zu vermeiden. Dieses Vakuum wird mit zwei Pumpen erzeugt (siehe Abb. 1) Die Ionen treffen schließlich auf einen Detektor, der den Ionenstrom misst und die Daten weiter an einen Computer sendet. Mit Hilfe eine Software (in unserem Fall LabView) werden anschließend die Daten ausgewertet.
 
-\myImage[9cm]{img/qme1}{Anordnung der Elektroden des Massenfilters}
+\myImage[13cm]{img/qme1}{Quadrupolmassenspektrometer (a) Äquipotentiallinien; (b) hyperbolische Elektroden [3]}
 
 \newpage
 \subsection{Die Mathieuschen Differentialgleichung}
@@ -60,7 +60,7 @@ $$\\$$
 \ddot{z} - \frac{e}{mr_{0}^{2}}(U+V cos (\omega t)) z = 0
 \end{equation}
 
-Das Feld im QMS ist ein periodisches inhomogenes Feld, weswegen sich die zeitabhängigen Terme nicht wegkürzen. Die Gleichungen aus (6) haben die Form von Mathieuschen Differentialgleichungen, deren Normalform lauten:
+Das Feld im QMS (siehe Abb. 1 a)) ist ein periodisches inhomogenes Feld, weswegen sich die zeitabhängigen Terme nicht wegkürzen. Die Gleichungen aus (6) haben die Form von Mathieuschen Differentialgleichungen, deren Normalform lauten:
 
 \begin{equation}
 \frac{d^{2}x}{t\tau^{2}}+(a_{x}+2q_{x}cos (2\tau)) x = 0
@@ -74,52 +74,22 @@ Aus dem Vergleich mit den Gleichungen (6) folgt, dass für die Parameter $a_{x}$
 a_{x} = -a_{z} = \frac{4eU}{mr_{0}^{2}\omega^{2}},\qquad q_{x}= -q_{z}= \frac{4eV}{mr_{0}^{2}\omega^{2}},\qquad \tau =\frac{\omega t}{2}
 \end{equation}
 
+Die Differentialgleichungen haben somit zwei Arten von Lösungen. Bei der einen Lösung bewegen sich die Ionen auf stabile Bahnen. Sie oszillieren in x-z-Richtung und gelangen durch den Quadrupolfilter ohne die Elektroden zu berühren. Bei der zweiten Lösung vergrößert sich die Amplitude der Ionen in x-z-Richtung exponentiell. Dadurch bewegen sich die Ionen auf instabile Bahnen und kollidieren mit den Elektroden (siehe Abb. 2 und 3)
 
+\myImage[7cm]{img/xzs}{Beispiel für eine stabile Bahn}
+
+\myImage[7cm]{img/xzi}{Beispiel für eine instabile Bahn}
 
 \subsection{Stabilitätsdiagramme}
-Um die Bewegung der Ionen durch den Quadrupol mathematisch-physikalisch zu beschreiben, benutzt man einen Plot, in dem man U über A aufträgt. Die Mathieu'schen Gleichungen haben zwei Arten von Lösungen. Eine Lösung führt zu endlichen Amplituden der Oszillationen, das entspricht einer stabilen Trajektorie durch den Quadrupol. Die andere Lösung führt zu Trajektorien, die in x- und/oder y-Richtung exponenziell anwachsen. Auf der Arbeitsgeraden befinden sich alle beobachteten Massen der Ionen. Alle a/q-Werte, die stabile Flugbahnen durch den Quadrupol ergeben, liegen in Abb. 2 innerhalb des schraffierten Feldes. Die Masse des Ions legt das Maximum des Stabilitätsfeldes fest. Stimmt man die Parameter U und A durch, so bewegt man sich auf der Arbeitsgeraden. Durch diese Methode gelangt eine Masse nach der anderen in den Bereich stabiler Oszillationen und kann detektiert werden.
+Um die Bewegung der Ionen durch den Quadrupol mathematisch-physikalisch zu beschreiben, benutzt man einen Plot, in dem man q über a aufträgt (siehe Abb. 4, q entspricht hier b). Das Verhältnis zwischen a und q beträgt konstant $\frac{2U}{V}$. Verändert man nur die Spannungen in einem gewissen Verhältnis zueinander, so bewegt man sich auf der Arbeitsgeraden. Alle a/q-Werte, die stabile Flugbahnen durch den Quadrupol ergeben, liegen in Abb. 5 innerhalb des eingefärbten Feldes. Die Masse des Ions legt das Maximum des Stabilitätsfeldes fest. Durch diese Methode gelangt eine Masse nach der anderen in den Bereich stabiler Oszillationen und kann detektiert werden.
+
+\myImage[9cm]{img/stab}{Komplettes Stabilitätsdiagramm}
 
 \myImage[9cm]{img/qme2}{Beispiel eines Stabilitätsdiagramms 1. Ordnung}
 
-\newpage
-\section{Aufgaben}
-\subsection*{Aufgabe 1 - Einschalten}
-Beim Einschalten des Massenspektrometers muss der Druck im Rezipienten unbedingt kleiner als $5 \cdot 10^{-5}$ mbar sein. Es gilt folgende Reihenfolge zu beachten:\\ 
-1. QMS-Steuergerät ein (Emission steht auf OFF!)\\ 
-2. Externe Spannungsquellen (200 V und 100 V) ein\\ 
-3. Emission auf ON, LANGSAM auf 0.2 mA hochregeln\\ 
-4. Sekundärelektronenverstärker (SEV) auf ON\\
-Die Geräte werden nach dem Experiment in umgekehrter Reihenfolge wieder ausgeschaltet. Des weiteren sind folgende Spannungen einzustellen:\\ 
-UFR= 113 V   (Formationsraum), \\
-UKA= 0 V   (Kathode), \\
-UFA= 106 V   (Feldachse). \\
-Das Einschalten des Heizdrahts (Filament) hat einen Druckanstieg im Rezipienten zur Folge. Wenn der Druck wieder den Ausgangswert erreicht hat (nach ca. 30 bis 40 min) kann mit der Messung begonnen werden. \\
+Um die Massen zu unterscheiden, definiert man die sogenannte Massenauflösung mit der Formel:
+\begin{equation}
+M = \frac{m}{\Delta m}
+\end{equation} 
 
-\subsection*{Aufgabe 2 - Restgas Messung} 
-Die Massenspektren werden mit Hilfe eines LabView-Programms auf dem PC aufgenommen. Die Auflösung des QMS sollte bei dieser Messung kalibriert sein (Resolution auf CAL). Bei zu kleiner Intensität kann mit erhöhter Verstärkung gemessen werden. Welche Massen sind zu erwarten? \\
-Normieren Sie das Spektrum auf den Druck im Rezipienten,sodass die Peak-Intensitäten dem Partialdruck des jeweiligen Atoms bzw. Moleküls entsprechen. (Massen $0-100$, 0.1 steps, 100 ms pro Kanal) 
-
-\subsection*{Aufgabe 3 - Testgas 1 (Argon) dosieren}
-Achtung: Vor dem Einlassen des Testgases unbedingt sowohl die Emission als auch den SEV ausschalten! Das Dosierventil ist mit äußerster Vorsicht zu bedienen! Es ist zu vermeiden, dass der Druck beim Öffnen des Ventils auf größer als 5 $5 \cdot 10^{-4}$ mbar ansteigt, da ein zu großer Druckstoß die Pumpen beschädigen kann. Zur Dosierung der Testgase wird wie folgt vorgegangen: Zunächst wird das Ventil zur Vorpumpe (V3) geschlossen. Dann wird das Ventil zum Testgas (V1A-D) langsam (um einen Druckstoß auf das Dosierventil zu vermeiden) komplett geöffnet und wieder geschlossen, so dass sich Testgas in den Zuleitungen befindet. Das Testgas wird dann über das Dosierventil eingelassen. Für die Messungen ist ein Druck von ca. $5 \cdot 10^{-6}$ mbar zu stabilisieren. Ein Emissionsstrom von 0.1 mA ist für die folgenden Messungen ausreichend. 
-
-\subsection*{Aufgabe 4 - Testgas 1 Messung}
-Messen und analysieren Sie das Spektrum des Testgases analog dem Restgas-Spektrum. Vergessen Sie nicht, für jedes Spektrum den Druck zu notieren! (Massen 0-100, 0.1 steps, 100 ms pro Kanal)\\
-Pumpen Sie nach der Messung das Testgas wieder ab: Schließen Sie zunächst das Dosierventil bis zum Anschlag. Schließen Sie danach das Ventil zwischen Vor- und Turbopumpe (V4). Nun kann das Testgas durch vorsichtiges Öffnen des Ventils zur Vorpumpe (V3) abgepumpt werden. Warten Sie 10 Minuten bis die Zuleitungen vollständig leergepumpt sind. Vergessen Sie nicht, nach spätestens 15 Minuten das Ventil V4 wieder zu öffnen! 
-
-\subsection*{Aufgabe 5 - Testgas 2 (Aceton) und Testgas 3 (Ethanol) dosieren und messen}
-Dosieren Sie Testgas 2 auf ca. $5 \cdot 10^{-6}$ mbar ($5 \cdot 10^{-5}$ mbar). Messen Sie die Spektren bei einem Emissionsstrom von 0.1 mA (Druck notieren). (Massen $0-100$, 0.1 steps, 100 ms pro Kanal) 
-
-\subsection*{Aufgabe 6 - Fragmentierungsmuster von Aceton (Testgas 2) und Ethanol (Testgas 3)}
-Weisen Sie die verschiedenen Massenpeaks den gebildeten ionischen Fragmenten zu und erklären Sie deren Bildung.
-
-\subsection*{Aufgabe 7 - Massenspektrum von Luft} 
-Dosieren Sie Luft ($5 \cdot 10^{-6}$ mbar) in den Rezipienten und messen Sie das Massenspektrum. Weisen Sie die verschiedenen Massenpeaks den Bestandteilen der Luft zu. 
-
-\subsection*{Aufgabe 8 - Auflösungsvermögen des Spektrometers} 
-a) Leiten Sie anhand des Stabilitätsdiagramms und des Zusammenhangs zwischen der Masse m und dem Parameter b (Höhe der Wechselspannung) im Stabilitätsdiagramm die Beziehung m/$\Delta$ m $\approx$ const. ab.\\
-
-b) Nehmen Sie bei verschiedenen Einstellungen der Auflösung ($2 – 6$, Resolution auf VAR) Massenspektren von Luft auf. Normieren Sie diese sinnvoll (!) und stellen Sie sie 
-gemeinsam in einem Diagramm dar. Was beobachten Sie? Tragen Sie anschließend $\Delta$m über m auf. Ist $\Delta$m proportional zu m? Welche Abweichungen treten auf und wie 
-kann man sie erklären? (Massen $0-50$, 0.1 steps, 200 ms pro Kanal)\\
-
-c) Untersuchen Sie die Auflösung m/$\Delta$m als Funktion der Beschleunigungsspannung $UB = UFR - UFA$ für die Ionen. Variieren Sie hierzu UFA im Bereich von 110 bis 0 V. Stellen Sie die gemessenen Spektren gemeinsam in einem Diagramm dar und vergleichen Sie es mit dem Diagramm aus 8b. Stellen Sie anschließend für zwei verschiedene Massen die Halbwertsbreite $\Delta$m über die Anzahl der Oszillationen der Ionen im Stabsystem dar (Länge des Stabsystems l=0.1 m, Hochfrequenz $\nu$ =2.5 MHz). (Massen $0-50$, 0.1 steps, 200 ms pro Kanal) 
+wobei $\Delta m$ die kleinste  auflösbare Massendifferenz ist.
