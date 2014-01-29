@@ -10,17 +10,36 @@ $U_{FA}$ & = $106\pm 0,5$V & (Massenfilters)\\
 Diese Werte wurden während der folgenden Messung nicht mehr verändert. 
 
 \subsection{Restgas-Messung}
-Bei dieser Messung machten wir uns mit dem Programm LabView vertraut und stellten die Verstärkung auf $10^{-10}$. Der Druck betrug dabei $8,9 \cdot 10^{-6}$ mbar. Zudem schlossen wir Ventil V3, öffneten das Ventil V4 und nahmen mehrere Messungen von dem Restgas. In der folgenden Abbildung wurden die gemittelten Ergebnisse dieser Messungen graphisch dargestellt.\\
+Bei dieser Messung machten wir uns mit dem Programm LabView vertraut und stellten die Verstärkung auf $10^{-10}$. Der Druck betrug dabei $8,9 \cdot 10^{-6}$ mbar. Zudem schlossen wir Ventil V3, öffneten das Ventil V4 und nahmen mehrere Messungen von dem Restgas. In der folgenden Abbildung und in der Tabelle 1 wurden die gemittelten Ergebnisse dieser Messungen graphisch dargestellt.\\
 Aus [4] wissen wir, dass der Peak bei m/q=18 für den Wasseranteil in dem Gas steht. Das liegt daran, dass in dem Rezipienten immer ein geringer Wasseranteil vorhanden ist, der sich, wenn das Gerät ausgeschaltet ist, auf der Glühkathode niederschlägt.
 
 \myImage[9cm]{img/RGbalk}{Überarbeitete Daten aus der Restgasmessung}
 
-\newpage
+\begin{center}
+\begin{tabular}{c|c|c}
+m/q [u/e] & p [$10^{-7} mbar$] & Ionen\\	
+\hline	
+12,5 &	0,16 & - \\
+14,5 &	0,26 & N2\\
+16,4 &	2,20 & O2\\
+17,3 &	15,09 & H2O\\
+18,3 &	59,33 & H2O Peak\\
+20,3 &	0,49 & Ar\\
+26,3 &	0,73 & Ethanol\\
+27,3 &	1,19 & Ethanol\\
+28,2 &	8,33 & N2 Peak\\
+31,3 &	0,59 & Ethanol Peak\\
+32,2 &	0,15 & O2 Peak\\
+42,2 &	0,48 & CO2 Peak\\
+\end{tabular}
+\end{center}
+\captionof{table}{Ergebnisse der Messung von dem Restgas bei einem Druck von $8,9\cdot 10^{-6}mbar$ mit errechneten Partialdrücke p und Zuordnung zu Ionen}
+
 \subsection{Testgas 1 - Dosierung und Messung}
 Über das Ventil V1A-D wurde das Testgas (in diesem Fall Argon) in die Vorkammer gelassen bis die Nadel am Druckmessgerät einmal kurz ausschlug. Anschließend öffneten wir das Ventil V2 und das Dosierventil vorsichtig, damit das Gas in den Rezipienten gelangen konnte. Nun stellten wir den Emissionsstrom der Glühkathode auf 0,2 mA, warteten kurz und notierten den Druck im Rezipienten. Anschließend starteten wir am PC das Messprogramm. Als dieses fertig war, schlossen wir das Ventil V4 und Dosierventil und öffneten vorsichtig das Ventil V3. Wir warteten anschließend 10 Minuten, bis die Vorpumpe den Rezipienten wieder leerte. Diesen Vorgang wiederholten wir für die Messung von Testgas 2 und 3.\\
-Um die Messdaten auszuwerten, änderten wir die Vorzeichen der Häufigkeiten und stellten die Graphen durch Balken dar. Anschließend berechneten wir die lokalen Maxima und den Partialdruck der entsprechenden Ionen. Die Zuordnung zu den Ionen erfolgte durch [4]. Die Ergebnisse sind in dem folgenden Graphen und der Tabelle dargestellt:\\
+Um die Messdaten auszuwerten, änderten wir die Vorzeichen der Häufigkeiten und stellten die Graphen durch Balken dar. Anschließend berechneten wir die lokalen Maxima und den Partialdruck der entsprechenden Ionen. Die Zuordnung zu den Ionen erfolgte durch [4]. Die Ergebnisse sind in dem folgenden Graphen und in der Tabelle 2 dargestellt:\\
 
-\myImage[10cm]{img/AGbalk}{Massenspektrum von Argon}
+\myImage[9cm]{img/AGbalk}{Massenspektrum von Argon}
 
 \begin{center}
 \begin{tabular}{c|c|c}
@@ -46,9 +65,9 @@ m/q [u/e] & p [$10^{-7} mbar$] & Ionen\\
 \captionof{table}{Ergebnisse der Messung von Argon bei einem Druck von $4\cdot 10^{-6}mbar$ mit errechneten Partialdrücke p und Zuordnung zu Ionen}
 
 \subsection{Testgas 2, 3 und Luft - Dosierung und Messung}
-Bei der Messung dieser beiden Gase sind wir wie oben beschrieben vorgegangen. Die Ergebnisse dieser Messungen werden in den folgenden Abbildungen 9, 10 und 11, sowie in den Tabellen 2, 3 und 4 dargestellt.
+Bei der Messung dieser beiden Gase sind wir wie oben beschrieben vorgegangen. Die Ergebnisse dieser Messungen werden in den folgenden Abbildungen 9, 10 und 11, sowie in den Tabellen 3, 4 und 5 dargestellt.
 
-\myImage[10cm]{img/ACbalk}{Massenspektrum von Aceton}
+\myImage[9cm]{img/ACbalk}{Massenspektrum von Aceton}
 
 \begin{center}
 \begin{tabular}{c|c|c}
@@ -136,3 +155,25 @@ m/q [u/e] & p [$10^{-7} mbar$] & Ionen\\
 \end{tabular}
 \end{center}
 \captionof{table}{Ergebnisse der Messung von Luft bei einem Druck von $5,6\cdot 10^{-6}mbar$ mit errechneten Partialdrücke p und Zuordnung zu Ionen}
+
+\newpage
+\subsection{Auflösungsvermögen des Spektrometers}
+Aus Gl. 8 ist bekannt:
+
+\begin{equation}
+b = \frac{2qV}{mr_{0}^{2}\omega^{2}}
+\end{equation}
+
+Daraus folgt für m:
+
+\begin{equation}
+m = \frac{2qV}{br_{0}^{2}\omega^{2}}
+\end{equation}
+
+Wenn wir nun zwei Punkte auf der Arbeitsgeraden haben, ergibt sich bei einer konstanten Spannung:
+
+\begin{equation}
+\Delta m = \frac{2qV}{r_{0}^{2}\omega^{2}}\cdot \left( \frac{1}{b_1}-\frac{1}{b_2}\right)
+\end{equation}
+
+Mit der Bedingung: $b_1 < b_2$
