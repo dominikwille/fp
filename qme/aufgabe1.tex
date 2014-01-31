@@ -1,16 +1,17 @@
 \subsection{Aufgabe 1 - Einschalten des Versuchsaufbaus}
 Die Geräte wurde von unserem Versuchsleiter eingeschaltet und er wies uns in die Funktionsweise der Geräte ein. Danach stellten wir die Spannungen $U_{FR}$, $U_{KA}$ und $U_{FA}$ auf die folgenden Werte ein:
 
-\begin{tabular}{l|l|l}
+\begin{tabular}{l l l}
 $U_{FR}$ & = $113\pm 2$ V & (Beschleunigungsspannung)\\
 $U_{KA}$ & = 0V & (Glühkathode)\\
 $U_{FA}$ & = $106\pm 0,5$V & (Massenfilters)\\
 \end{tabular}
 
 Diese Werte wurden während der folgenden Messung nicht mehr verändert. 
+Es gelang uns, den Druck während den Messungen konstant zu halten. Da auch bei mehreren Messungen des selben Gases keine Schwankungen des m/q-Wertes auftraten, nahmen wir diesen Fehler als vernachlässigbar klein an und wird in der folgenden Auswertung nicht berücksichtigt.
 
 \subsection{Restgas-Messung}
-Bei dieser Messung machten wir uns mit dem Programm LabView vertraut und stellten die Verstärkung auf $10^{-10}$. Der Druck betrug dabei $8,9 \cdot 10^{-6}$ mbar. Zudem schlossen wir Ventil V3, öffneten das Ventil V4 und nahmen mehrere Messungen von dem Restgas. In der folgenden Abbildung und in der Tabelle 1 wurden die gemittelten Ergebnisse dieser Messungen graphisch dargestellt.\\
+Bei dieser Messung machten wir uns mit dem Programm LabView vertraut und stellten die Verstärkung auf $10^{-10}$. Der Druck betrug dabei $8,9 \cdot 10^{-6}$ mbar. Zudem schlossen wir Ventil V3, öffneten das Ventil V4 und nahmen mehrere Messungen von dem Restgas. In Abb. 7 und in Tab. 1 werden die gemittelten Ergebnisse dieser Messungen dargestellt.\\
 Aus [4] wissen wir, dass der Peak bei m/q=18 für den Wasseranteil in dem Gas steht. Das liegt daran, dass in dem Rezipienten immer ein geringer Wasseranteil vorhanden ist, der sich, wenn das Gerät ausgeschaltet ist, auf der Glühkathode niederschlägt.
 
 \myImage[9cm]{img/RGbalk}{Überarbeitete Daten aus der Restgasmessung}
@@ -20,24 +21,24 @@ Aus [4] wissen wir, dass der Peak bei m/q=18 für den Wasseranteil in dem Gas st
 m/q [u/e] & p [$10^{-7} mbar$] & Ionen\\	
 \hline	
 12,5 &	0,16 & - \\
-14,5 &	0,26 & N2\\
-16,4 &	2,20 & O2\\
-17,3 &	15,09 & H2O\\
-18,3 &	59,33 & H2O Peak\\
-20,3 &	0,49 & Ar\\
+14,5 &	0,26 & $N_2$\\
+16,4 &	2,20 & $O_2$\\
+17,3 &	15,09 & $H_2O$\\
+18,3 &	59,33 & $H_2O$ Peak\\
+20,3 &	0,49 & Argon\\
 26,3 &	0,73 & Ethanol\\
 27,3 &	1,19 & Ethanol\\
-28,2 &	8,33 & N2 Peak\\
+28,2 &	8,33 & $N_2$ Peak\\
 31,3 &	0,59 & Ethanol Peak\\
-32,2 &	0,15 & O2 Peak\\
-42,2 &	0,48 & CO2 Peak\\
+32,2 &	0,15 & $O_2$ Peak\\
+42,2 &	0,48 & $CO_2$ Peak\\
 \end{tabular}
 \end{center}
 \captionof{table}{Ergebnisse der Messung von dem Restgas bei einem Druck von $8,9\cdot 10^{-6}mbar$ mit errechneten Partialdrücke p und Zuordnung zu Ionen}
 
 \subsection{Testgas 1 - Dosierung und Messung}
 Über das Ventil V1A-D wurde das Testgas (in diesem Fall Argon) in die Vorkammer gelassen bis die Nadel am Druckmessgerät einmal kurz ausschlug. Anschließend öffneten wir das Ventil V2 und das Dosierventil vorsichtig, damit das Gas in den Rezipienten gelangen konnte. Nun stellten wir den Emissionsstrom der Glühkathode auf 0,2 mA, warteten kurz und notierten den Druck im Rezipienten. Anschließend starteten wir am PC das Messprogramm. Als dieses fertig war, schlossen wir das Ventil V4 und Dosierventil und öffneten vorsichtig das Ventil V3. Wir warteten anschließend 10 Minuten, bis die Vorpumpe den Rezipienten wieder leerte. Diesen Vorgang wiederholten wir für die Messung von Testgas 2 und 3.\\
-Um die Messdaten auszuwerten, änderten wir die Vorzeichen der Häufigkeiten und stellten die Graphen durch Balken dar. Anschließend berechneten wir die lokalen Maxima und den Partialdruck der entsprechenden Ionen. Die Zuordnung zu den Ionen erfolgte durch [4]. Die Ergebnisse sind in dem folgenden Graphen und in der Tabelle 2 dargestellt:\\
+Um die Messdaten auszuwerten, änderten wir die Vorzeichen der Häufigkeiten und stellten die Graphen durch Balken dar. Anschließend berechneten wir die lokalen Maxima und den Partialdruck der entsprechenden Ionen. Die Zuordnung zu den Ionen erfolgte durch [4]. Die Ergebnisse sind in Abb. 8 und in Tab. 2 dargestellt:\\
 
 \myImage[9cm]{img/AGbalk}{Massenspektrum von Argon}
 
@@ -65,7 +66,7 @@ m/q [u/e] & p [$10^{-7} mbar$] & Ionen\\
 \captionof{table}{Ergebnisse der Messung von Argon bei einem Druck von $4\cdot 10^{-6}mbar$ mit errechneten Partialdrücke p und Zuordnung zu Ionen}
 
 \subsection{Testgas 2, 3 und Luft - Dosierung und Messung}
-Bei der Messung dieser beiden Gase sind wir wie oben beschrieben vorgegangen. Die Ergebnisse dieser Messungen werden in den folgenden Abbildungen 9, 10 und 11, sowie in den Tabellen 3, 4 und 5 dargestellt.
+Bei der Messung dieser Gase sind wir wie oben beschrieben vorgegangen. Die Ergebnisse dieser Messungen werden in den folgenden Abbildungen 9, 10 und 11, sowie in den Tabellen 3, 4 und 5 dargestellt.
 
 \myImage[9cm]{img/ACbalk}{Massenspektrum von Aceton}
 
@@ -77,17 +78,17 @@ m/q [u/e] & p [$10^{-7} mbar$] & Ionen\\
 13,0 &	0,28 &\\
 14,4 &	0,97 & Aceton\\
 16,4 &	2,25 &\\
-17,3 &	5,84 & H2O\\
-18,3 &	23,09 & H2O Peak\\
-21,7 &	0,35 & Ar\\
+17,3 &	5,84 & $H_2O$\\
+18,3 &	23,09 & $H_2O$ Peak\\
+21,7 &	0,35 & Argon\\
 26,3 &	0,80 & Aceton\\
 27,3 &	0,90 & Aceton\\
-28,3 &	11,22 & Aceton, N2 Peak\\
+28,3 &	11,22 & Aceton, $N_2$ Peak\\
 29,9 &	0,077 & Aceton\\
 30,8 &	0,28 &\\
 31,7 &	0,22 &\\
 39,3 &	0,23 & Aceton\\
-39,8 &	0,18 & Ar Peak\\
+39,8 &	0,18 & Argon Peak\\
 41,3 &	0,22 & Aceton\\
 42,3 &	0,41 & Aceton\\
 43,3 &	6,57 & Aceton Peak\\
@@ -109,8 +110,8 @@ m/q [u/e] & p [$10^{-7} mbar$] & Ionen\\
 14,4 &	0,64 & Ethanol\\
 15,4 &	3,04 & Ethanol\\
 16,4 &	1,90 &\\
-17,4 &	5,56 & H2O\\
-18,4 &	22,11 & H2O Peak\\
+17,4 &	5,56 & $H_2O$\\
+18,4 &	22,11 & $H_2O$ Peak\\
 20,0 &	0,24 &\\
 24,7 &	0,38 & Ethanol\\
 26,3 &	0,57 & Ethanol\\
@@ -136,18 +137,18 @@ m/q [u/e] & p [$10^{-7} mbar$] & Ionen\\
 m/q [u/e] & p [$10^{-7} mbar$] & Ionen\\	
 \hline	
 2,6 &	0,20 &\\
-14,4 &	1,41 & N2\\
+14,4 &	1,41 & $N_2$\\
 15,0 &	0,08 &\\
-16,4 &	1,62 & O2\\
-17,3 &	5,31 & H2O\\
-18,3 &	17,71 & H2O Peak\\
+16,4 &	1,62 & $O_2$\\
+17,3 &	5,31 & $H_2O$\\
+18,3 &	17,71 & $H_2O$ Peak\\
 19,8 &	0,20 &\\
 25,5 &	0,29 &\\
 27,4 &	0,48 &\\
-28,2 &	26,52 & N2 Peak\\
-30,2 &	0,39 & N2\\
+28,2 &	26,52 & $N_2$ Peak\\
+30,2 &	0,39 & $N_2$\\
 30,8 &	0,15 &\\
-40,2 &	0,13 & O2 Peak\\
+40,2 &	0,13 & $O_2$ Peak\\
 40,8 &	0,23 &\\
 42,0 &	0,23 &\\
 42,6 &	0,28 &\\
@@ -161,6 +162,7 @@ m/q [u/e] & p [$10^{-7} mbar$] & Ionen\\
 Aus Gl. 8 ist bekannt:
 
 \begin{equation}
+\notag
 b = \frac{2qV}{mr_{0}^{2}\omega^{2}}
 \end{equation}
 
@@ -170,10 +172,43 @@ Daraus folgt für m:
 m = \frac{2qV}{br_{0}^{2}\omega^{2}}
 \end{equation}
 
-Wenn wir nun zwei Punkte auf der Arbeitsgeraden haben, ergibt sich bei einer konstanten Spannung:
+Wenn wir nun zwei Punkte auf der Arbeitsgeraden haben, ergibt sich bei einer konstanten Spannung die Breite des Massenpeaks:
 
 \begin{equation}
-\Delta m = \frac{2qV}{r_{0}^{2}\omega^{2}}\cdot \left( \frac{1}{b_1}-\frac{1}{b_2}\right)
+\Delta m = \frac{2qV}{r_{0}^{2}\omega^{2}}\cdot \left( \frac{1}{b_1}-\frac{1}{b_2}\right) \qquad \text{mit} \qquad b_1 < b_2
 \end{equation}
 
-Mit der Bedingung: $b_1 < b_2$
+Nehmen wir nun an, dass sich die gemessenen Massen in der Mitte der Peaks befindet, dann gilt für b:
+
+\begin{equation}
+b = \frac{b_1 + b_2}{2}
+\end{equation}
+
+Daraus folgt:
+
+\begin{equation}
+\frac{b_1 + b_2}{2}=\frac{2qV}{mr_0^2 \omega^2} \leftrightarrow m = \frac{2qV}{r_0^2 \omega^2}\cdot \frac{2}{b_1 + b_2}
+\end{equation}
+
+Und somit für m/$\Delta$ m:
+
+\begin{equation}
+\frac{m}{\Delta m} = \frac{2}{(b_1+b_2)\cdot \left(\frac{1}{b_1}-\frac{1}{b_2}\right)} = \frac{2}{\frac{b_2}{b_1}-\frac{b_1}{b_2}} = \text{const.}
+\end{equation}
+
+Geht man davon aus, dass $\Delta$m mit der Beschleunigungsspannung zusammenhängt, ergibt sich für Ionen im Filter eine Geschwindigkeit von:
+
+\begin{equation}
+v=\sqrt{\frac{2qU_B}{m}}
+\end{equation}
+
+Je höher die Beschleunigungsspannung ist, desto kürzer ist die Aufenthaltsdauer im Massenfilter und desto geringer ist die Genauigkeit. Daraus folgt für die Anzahl $n$ der Durchlaufenen Schwingungen:
+
+\begin{equation}
+n = \frac{f\cdot l}{v}= f\cdot l \cdot \sqrt{\frac{m}{2qU_B}}
+\end{equation}
+
+mit der Frequenz $f$ und der Länge $l$ des Massenfilter.\\
+Es wurden zwei Messungen mit Luft als Testgas durchgeführt, um diese Relationen zu untersuchen. Dabei variierte bei der ersten Messung der Wert von $a$ und bei der Zweiten der Wert von $U_{FA}$.
+
+\myImage[10cm]{img/VAR}{Messung des Massenspektrums für Luft unter Variation der Auflösung a}
