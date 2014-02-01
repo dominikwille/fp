@@ -1,24 +1,24 @@
 \section{Ziele des Versuchs}
-In diesem Versuch sollen anhand des Quadrupol-Massenspektrometers (QMS) die Methoden der Massenspektrometrie und die Grundlagen der Vakuum-Physik vermittelt werden. Die Massenspektroskopie ist ein wichtiges Analyseverfahren um die Struktur und die Zusammensetzung verschiedener chemischer Elemente und Gemische zu untersuchen.\\
-In der Physik setzt man Massenspektrometer ein, um Informationen über Isotopenzusammensetzungen verschiedener chemischer Elemente zu messen.
+In diesem Versuch sollen anhand des Quadrupol-Massenspektrometers (QMS) die Methoden der Massenspektrometrie und die Grundlagen der Vakuum-Physik vermittelt werden. Die Massenspektroskopie ist ein wichtiges Analyseverfahren, um die Struktur und die Zusammensetzung verschiedener chemischer Elemente und Gemische zu untersuchen.\\
+In der Physik setzt man Massenspektrometer ein, um Informationen über Isotopenzusammensetzungen verschiedener chemischer Elemente zu erhalten.
 
 \section{Theoretische Grundlagen}
 \subsection{Der Quadrupol-Massenspektrometer}
-Ein Quadrupol-Massenspektrometer erzeugt ein elektrisches Feld. Je nach stärke der anliegenden Felder und dem Ladungs-/Massenverhältnisses der Ionen, bewegen sie sich auf stabilen oder instabilen Bahnen. Je nach dem, wie man diese Parameter variiert, werden verschiedene Ionen auf stabile Bahnen gebracht und so durch den QMS gelassen. Diesen Filtervorgang nennt man Massenfiltern.\\
-Der Quadrupol-Massenspektrometer befindet sich dabei in einer Vakuum-Kammer (Rezipient) um ungewollte Stöße der Ionen mit anderen Teilchen zu vermeiden. Dieses Vakuum wird mit zwei Pumpen erzeugt (siehe Abb. 1) Die Ionen treffen schließlich auf einen Detektor, der den Ionenstrom misst und die Daten weiter an einen Computer sendet. Mit Hilfe eine Software (in unserem Fall LabView) werden anschließend die Daten ausgewertet.
+Ein Quadrupol-Massenspektrometer erzeugt ein elektrisches Feld. Je nach Stärke der anliegenden Felder und dem Ladungs-/Massenverhältnis der Ionen, bewegen sie sich auf stabilen oder instabilen Bahnen. Abhängig davon wie diese Parameter variiert werden, gelangen verschiedene Ionen auf stabile Bahnen und auf diesen durch den QMS. Diesen Filtervorgang nennt man Massenfiltern.\\
+Der Quadrupol-Massenspektrometer befindet sich dabei in einer Vakuum-Kammer (Rezipient), um ungewollte Stöße der Ionen mit anderen Teilchen zu vermeiden. Dieses Vakuum wird mit zwei Pumpen erzeugt (siehe Abb. 1) Die Ionen treffen schließlich auf einen Detektor, der den Ionenstrom misst und die Daten an einen Computer weitersendet. Mit Hilfe eine Software (in unserem Fall LabView) werden anschließend die Daten ausgewertet.
 
 \myImage[13cm]{img/qme1}{Quadrupolmassenspektrometer (a) Äquipotentiallinien; (b) hyperbolische Elektroden [3]}
 
 \newpage
 \subsection{Die Mathieuschen Differentialgleichung}
-Die jeweils gegenüberliegenden Stäbe werden elektrisch miteinander verbunden und paarweise an den positiven bzw. negativen Pol einer variablen Spannungsquelle angeschlossen. Zudem werden Wechselspannungsfelder ($f \approx 10^8$ Hz) überlagert mit einer Phasendifferenz zwischen den Stabpaaren von $\phi = 180^{\circ}$\\
+Die jeweils gegenüberliegenden Stäbe werden elektrisch miteinander verbunden und paarweise an den positiven bzw. negativen Pol einer variablen Spannungsquelle angeschlossen. Zudem werden Wechselspannungsfelder ($f \approx 10^8$ Hz) mit einer Phasendifferenz zwischen den Stabpaaren von $\phi = 180^{\circ}$\\ überlagert
 Wolfgang Paul beschrieb das Potential eines Quadrupols in kartesischen Koordinaten durch folgende Gleichung [1]:
 
 \begin{equation}
 \mathbf{\Phi} = \frac{\Phi_{0}}{2r^{2}}\left(\alpha x^{2}+\beta y^{2}+\gamma z^{2}\right)
 \end{equation}
 
-Durch Anwendung der Laplace'sche Differentialgleichung $\Delta \mathbf{\Phi} =0$ ergibt sich für die Koeffizienten die Bedingung:
+Durch Anwendung der Laplace'schen Differentialgleichung $\Delta \mathbf{\Phi} =0$ ergibt sich für die Koeffizienten die Bedingung:
 
 \begin{equation}
 \Delta \mathbf{\Phi} = \alpha + \beta +\gamma =0
@@ -31,7 +31,7 @@ Wir betrachten nun die zweidimensionale Lösung. Es gilt $\alpha = -\gamma = 1$,
 \mathbf{\Phi} = \frac{\Phi_{0}}{2r_{0}^{2}}\left(x^{2}-z^{2}\right)
 \end{equation}
 
-Diese Bedingungen werden durch ein elektrisches Feld erfüllt, welches durch vier hyperbolisch geformten Stabelektroden induzierte wird (siehe Abb. 1). Das Koordinatensystem definiert man anschließend so, dass die y-Achse parallel zu den Elektroden verläuft.
+Diese Bedingungen werden durch ein elektrisches Feld erfüllt, welches durch vier hyperbolisch geformte Stabelektroden induziert wird (siehe Abb. 1). Das Koordinatensystem definiert man anschließend so, dass die y-Achse parallel zu den Elektroden verläuft.
 \\
 Die elektrische Feldstärke $\mathbf{E}$ errechnet sich aus der Gleichung $-\mathbf{\triangledown \Phi} = \mathbf{E}$. Daraus folgt für $\mathbf{E}$ mit den oben genannten Bedingungen:
 
@@ -46,7 +46,7 @@ Die elektrische Feldstärke $\mathbf{E}$ errechnet sich aus der Gleichung $-\mat
 \right)
 \end{equation}
 
-Bei konstantem $\Phi_{0}$ hat das zur Folge, dass die Ionen in diesem Feld eine harmonische Schwingung in der x-y-Ebene vollführen. In z-Richtung jedoch wird die Kraft auf die Ionen exponentiell größer. Um dieses Problem zu lösen, legt man als Potential $\Phi_{0}$ neben der Gleichspannung U noch eine Wechselspannung V an. Damit gilt für $\Phi_{0}$:
+Bei konstantem $\Phi_{0}$ hat dies zur Folge, dass die Ionen in diesem Feld eine harmonische Schwingung in der x-y-Ebene vollführen. In z-Richtung jedoch wird die Kraft auf die Ionen exponentiell größer. Um dieses Problem zu lösen, legt man als Potential $\Phi_{0}$ neben der Gleichspannung U noch eine Wechselspannung V an. Damit gilt für $\Phi_{0}$:
 
 \begin{equation}
 \Phi_{0}=U + V cos(\omega t)
@@ -60,7 +60,7 @@ $$\\$$
 \ddot{z} - \frac{e}{mr_{0}^{2}}(U+V cos (\omega t)) z = 0
 \end{equation}
 
-Das Feld im QMS (siehe Abb. 1 a)) ist ein periodisches inhomogenes Feld, weswegen sich die zeitabhängigen Terme nicht wegkürzen. Die Gleichungen aus (6) haben die Form von Mathieuschen Differentialgleichungen, deren Normalform lauten:
+Das Feld im QMS (siehe Abb. 1 a)) ist ein periodisches inhomogenes Feld, weswegen sich die zeitabhängigen Terme nicht wegkürzen. Die Gleichungen aus (6) haben die Form von Mathieuschen Differentialgleichungen, deren Normalformen lauten:
 
 \begin{equation}
 \frac{d^{2}x}{t\tau^{2}}+(a_{x}+2q_{x}cos (2\tau)) x = 0
@@ -74,14 +74,14 @@ Aus dem Vergleich mit den Gleichungen (6) folgt, dass für die Parameter $a_{x}$
 a_{x} = -a_{z} = \frac{4eU}{mr_{0}^{2}\omega^{2}},\qquad q_{x}= -q_{z}= \frac{4eV}{mr_{0}^{2}\omega^{2}} := b,\qquad \tau =\frac{\omega t}{2}
 \end{equation}
 
-Die Differentialgleichungen haben somit zwei Arten von Lösungen. Bei der einen Lösung bewegen sich die Ionen auf stabile Bahnen. Sie oszillieren in x-z-Richtung und gelangen durch den Quadrupolfilter ohne die Elektroden zu berühren. Bei der zweiten Lösung vergrößert sich die Amplitude der Ionen in x-z-Richtung exponentiell. Dadurch bewegen sich die Ionen auf instabile Bahnen und kollidieren mit den Elektroden (siehe Abb. 2 und 3)
+Die Differentialgleichungen haben somit zwei Arten von Lösungen. Bei der einen Lösung bewegen sich die Ionen auf stabilen Bahnen. Sie oszillieren in x-z-Richtung und gelangen durch den Quadrupolfilter ohne die Elektroden zu berühren. Bei der zweiten Lösung vergrößert sich die Amplitude der Ionen in x-z-Richtung exponentiell. Dadurch bewegen sich die Ionen auf instabilen Bahnen und kollidieren mit den Elektroden (siehe Abb. 2 und 3)
 
 \myImage[7cm]{img/xzs}{Beispiel für eine stabile Bahn}
 
 \myImage[7cm]{img/xzi}{Beispiel für eine instabile Bahn}
 
 \subsection{Stabilitätsdiagramme}
-Um die Bewegung der Ionen durch den Quadrupol mathematisch-physikalisch zu beschreiben, benutzt man einen Plot, in dem man q über a aufträgt (siehe Abb. 4, q entspricht hier b). Das Verhältnis zwischen a und q beträgt konstant $\frac{2U}{V}$. Verändert man nur die Spannungen in einem gewissen Verhältnis zueinander, so bewegt man sich auf der Arbeitsgeraden. Alle a/q-Werte, die stabile Flugbahnen durch den Quadrupol ergeben, liegen in Abb. 5 innerhalb des eingefärbten Feldes. Die Masse des Ions legt das Maximum des Stabilitätsfeldes fest. Durch diese Methode gelangt eine Masse nach der anderen in den Bereich stabiler Oszillationen und kann detektiert werden.
+Um die Bewegung der Ionen durch den Quadrupol mathematisch-physikalisch zu beschreiben, benutzt man einen Plot, in dem man q über a aufträgt (siehe Abb. 4, q entspricht hier b). Das Verhältnis zwischen a und q beträgt konstant $\frac{2U}{V}$. Verändert man nur die Spannungen in einem gewissen Verhältnis zueinander, bewegt man sich auf der Arbeitsgeraden. Alle a/q-Werte, die stabile Flugbahnen durch den Quadrupol ergeben, liegen in Abb. 5 innerhalb des eingefärbten Feldes. Die Masse des Ions legt das Maximum des Stabilitätsfeldes fest. Durch diese Methode gelangt eine Masse nach der anderen in den Bereich stabiler Oszillationen und kann detektiert werden.
 
 \myImage[9cm]{img/stab}{Komplettes Stabilitätsdiagramm}
 
