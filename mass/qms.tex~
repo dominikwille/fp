@@ -1,0 +1,134 @@
+\documentclass[a4paper, parskip=half]{scrartcl}
+\input{../fp}
+\usepackage[english]{babel}
+
+\newcommand{\myPackage}[1]{%
+  \textit{#1}-Paket%
+}
+
+\newcommand{\myFormat}[1]{%
+  \textit{#1}%
+}
+
+\newcommand{\myPath}[1]{%
+  \textit{#1}%
+}
+
+\newcommand{\myTitle}{Ba 7: Quadrupole mass spectrometeter}
+\newcommand{\myAuthor}{Artem Gerassimoff, Alexander Heinisch, Dominik Wille}
+\newcommand{\myDate}{\today}
+\newcommand{\exDate}{01/15/2013 10am-2pm}
+\newcommand{\exDoc}{Christian Lehmann}
+\newcommand{\myTitleImage}{}
+\newcommand{\myTitleLeft}{%
+   \textbf{Freie Universität Berlin}\\
+   Departement of physics\\
+   Physikalisches Fortgeschrittenenpraktikum%
+}
+\newcommand{\myTitleRight}{%
+  \textbf{Contact information:}\\
+  \myMail{dominik.wille@fu-berlin.de} \\
+  \myMail{matthias.heinisch@gmx.de} \\
+  \myMail{art.geras@gmail.com}
+}
+
+\begin{document}
+\begin{titlepage}
+\begin{center}
+    \vspace{5cm}
+    \huge\bfseries
+    \myTitle
+    \vspace{1cm}
+
+    \large\normalfont by
+
+    \bigskip
+    \textbf{\myAuthor}
+
+    \myDate
+
+    \vspace{1cm}
+    
+    \large\normalfont
+    experiment execution on
+
+    \textbf{\exDate}
+    \vspace{1cm}
+    
+    docent
+
+    \textbf{\exDoc}
+    
+    
+  \end{center}
+  \vfill
+  \enlargethispage{2cm}
+  \parbox[t]{0.55\textwidth}{%
+   \myTitleLeft
+  }
+  \parbox[t]{0.45\textwidth}{\raggedleft%
+    \myTitleRight
+}
+\end{titlepage}
+\tableofcontents
+\newpage
+\section{Introduction}
+The \textbf{Quadrupole mass spectrometery} short QMS is a powerful method to determine information about the mass and structure of Molecules. In this report we will briefly explain the principle of the QMS and evaluate 3 example measurements of different substances. To get a rough idea of the accuracy of the experiment we will also discuss the resolution with different settings.
+
+\section{The principle of the Quadrupole mass spectrometery}
+As the name implies, you use an electrostatic quadrupole field to differentiate ions by their masses. Therefore we accelerate the ions with the voltage $U_a$ and ``shoot'' them trough our quadrupole. The Quadrupole then works like a filter due to the fact that only ions with particular properties, namely the $m/q$-quotient will have a stable curve. Stable here means that the particle does not have a growing oscillation. To determine the amount of particles passing the filter we use a detector measuring the force caused by the accselerated particles hitting it.
+
+So what we need to do is to vary the properties which determine the $m/q$-quotient for ions to pass the quadrupole.
+
+\subsection{Theoretical description}
+For a theroretical description of the movement of particles in the quadrupole mass spectrometer we define the $z$-direction parallel to the particles velocity. We also assume that we have a perfect hyperbolic electric potential:
+\begin{align}
+\varphi &= \frac{\varphi_0}{r_0^2} \left(x^2 - y^2 \right)\\
+\text{with}\;\;\varphi_0 &= U + V \cdot \cos\left(\omega t\right)
+\end{align} 
+This would be realized if our electrodes would be perfectly hyperblic. We also assume that we do not have any electric potential outside the quadrupole. We also neglect the gravitation force.
+
+\myImage[5cm]{img/quadrupole}{Sketch of the idealistic quadrupole\cite{quadrupole_img}}
+
+Therefor the Lagragian $L$ of a particle looks like:
+\begin{align}
+L &= \frac{1}{2}m\dot{\bf r}^2 - q \cdot \varphi \\
+&= \frac{1}{2}m \dot{\bf r}^2 - q \cdot \frac{\varphi_0}{r_0^2}\left(x^2 - y^2 \right)
+\end{align}
+
+Which gives us the equations of motion:
+\begin{align}
+m\ddot{x} - \frac{2q}{r_0^2} \left( U + V \cdot \cos\left(\omega t\right) \right ) x = 0 \\
+m\ddot{y} + \frac{2q}{r_0^2} \left( U + V \cdot \cos\left(\omega t\right) \right ) y = 0
+\end{align}
+
+With the substitutions
+\begin{align}
+a = \frac{8qU}{mr_0^2\omega^2} \;\; ; \;\; q = \frac{4qV}{mr_0^2\omega^2} \;\; ; \;\; \omega t = 2 \tau
+\end{align}
+They became the well known \textsc{Mathieus’ Differential Equations}.
+\begin{align}
+\ddot{x} - \left(a + 2q\cos\left(2\tau\right)\right) x \label{mat1} = 0\\
+\ddot{y} - \left(a + 2q\cos\left(2\tau\right)\right) y \label{mat2} = 0
+\end{align}
+
+Every solution can be written in the form
+\begin{align}
+x(\tau) = \alpha'e^{\mu\tau} \sum C_{2n}e^{2in\tau} + \alpha''e^{-\mu\tau} \sum C_{2n}e^{-2in\tau}
+\end{align}
+Since x and y are finite for stable curves this illustrates that $\mu$ must be pure imaginary. So $\mu = i \beta$ with $\beta \in \mathbb{R}$.
+Inserting this expression into the \eqref{mat1} and \eqref{mat2} also gives some conditions for $C_{n}$. 
+
+\subsection{Stability criterion}
+The complete expression for $C_n$ gives stability criteria for the x- and y-components which can be illustrted in a diagram: 
+
+\myImage[8cm]{img/stable1}{Stability criterion \cite{stable1}}
+
+\section{Experimental observation}
+
+\begin{thebibliography}{999}
+\bibitem{quadrupole_img} Taken From Das elektrische Massenfilter als Massenspektrometer W. PAUL, H. P. REINHARD und U. VON ZAHN
+\bibitem{stable1} Taken From Wolfgang Demtröder - Experimental physics 3
+
+\end{thebibliography}
+\end{document}
