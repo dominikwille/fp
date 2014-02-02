@@ -37,7 +37,7 @@ m/q [u/e] & p [$10^{-7} mbar$] & Ionen\\
 \captionof{table}{Ergebnisse der Messung von dem Restgas bei einem Druck von $8,9\cdot 10^{-6}mbar$ mit errechneten Partialdrücke p und Zuordnung zu Ionen}
 
 \subsection{Testgas 1 - Dosierung und Messung}
-Über das Ventil V1A-D wurde das Testgas (in diesem Fall Argon) in die Vorkammer gelassen bis die Nadel am Druckmessgerät einmal kurz ausschlug. Anschließend öffneten wir das Ventil V2 und das Dosierventil vorsichtig, damit das Gas in den Rezipienten gelangen konnte. Nun stellten wir den Emissionsstrom der Glühkathode auf 0,2 mA, warteten kurz und notierten den Druck im Rezipienten. Anschließend starteten wir am PC das Messprogramm. Als dieses fertig war, schlossen wir das Ventil V4 und Dosierventil und öffneten vorsichtig das Ventil V3. Wir warteten anschließend 10 Minuten, bis die Vorpumpe den Rezipienten wieder leerte. Diesen Vorgang wiederholten wir für die Messung von Testgas 2 und 3.\\
+Über das Ventil V1A-D wurde das Testgas (in diesem Fall Argon) in die Vorkammer gelassen, bis die Nadel am Druckmessgerät einmal kurz ausschlug. Anschließend öffneten wir das Ventil V2 und das Dosierventil vorsichtig, damit das Gas in den Rezipienten gelangen konnte. Nun stellten wir den Emissionsstrom der Glühkathode auf 0,2 mA, warteten kurz bis der Druck im Rezipienten konstant blieb und notierten ihn. Anschließend starteten wir am PC das Messprogramm. Als dieses fertig war, schlossen wir das Ventil V4 und das Dosierventil und öffneten vorsichtig das Ventil V3. Wir warteten dann 10 Minuten, bis die Pumpe den Rezipienten wieder leerte. Diesen Vorgang wiederholten wir für alle Messungen\\
 Um die Messdaten auszuwerten, änderten wir die Vorzeichen der Häufigkeiten und stellten die Graphen durch Balken dar. Anschließend berechneten wir die lokalen Maxima und den Partialdruck der entsprechenden Ionen. Die Zuordnung zu den Ionen erfolgte durch [4]. Die Ergebnisse sind in Abb. 8 und in Tab. 2 dargestellt:\\
 
 \myImage[9cm]{img/AGbalk}{Massenspektrum von Argon}
@@ -63,7 +63,7 @@ m/q [u/e] & p [$10^{-7} mbar$] & Ionen\\
 58,3 & 0,18	&\\
 \end{tabular}
 \end{center}
-\captionof{table}{Ergebnisse der Messung von Argon bei einem Druck von $4\cdot 10^{-6}mbar$ mit errechneten Partialdrücke p und Zuordnung zu Ionen}
+\captionof{table}{Ergebnisse der Messung von Argon bei einem Druck von $4,0\cdot 10^{-6}mbar$ mit errechneten Partialdrücke p und Zuordnung zu Ionen}
 
 \subsection{Testgas 2, 3 und Luft - Dosierung und Messung}
 Bei der Messung dieser Gase sind wir wie oben beschrieben vorgegangen. Die Ergebnisse dieser Messungen werden in den folgenden Abbildungen 9, 10 und 11, sowie in den Tabellen 3, 4 und 5 dargestellt.
@@ -178,7 +178,7 @@ Wenn wir nun zwei Punkte auf der Arbeitsgeraden haben, ergibt sich bei einer kon
 \Delta m = \frac{2qV}{r_{0}^{2}\omega^{2}}\cdot \left( \frac{1}{b_1}-\frac{1}{b_2}\right) \qquad \text{mit} \qquad b_1 < b_2
 \end{equation}
 
-Nehmen wir nun an, dass sich die gemessenen Massen in der Mitte der Peaks befindet, dann gilt für b:
+Nehmen wir nun an, dass sich die gemessenen Massen in der Mitte der Peaks befinden, dann gilt für b:
 
 \begin{equation}
 b = \frac{b_1 + b_2}{2}
@@ -212,3 +212,49 @@ mit der Frequenz $f$ und der Länge $l$ des Massenfilter.\\
 Es wurden zwei Messungen mit Luft als Testgas durchgeführt, um diese Relationen zu untersuchen. Dabei variierte bei der ersten Messung der Wert von $a$ und bei der Zweiten der Wert von $U_{FA}$.
 
 \myImage[10cm]{img/VAR}{Messung des Massenspektrums für Luft unter Variation der Auflösung a}
+
+\begin{center}
+\begin{minipage}{0.25\textwidth}		
+\begin{tabular}{l|l|l}
+a & m/q & $\Delta m$\\	
+\hline		
+2 & 27,45 & 2,20\\
+3 & 27,62 & 1,99\\
+4 & 27,90 & 1,17\\
+5 & 28,19 & 0,69\\
+6 & 28,35 & 0,33\\
+\end{tabular}
+\end{minipage}
+\begin{minipage}{0.25\textwidth}
+\begin{tabular}{l|l|l}
+a & m/q & $\Delta m$\\
+\hline
+2 &	31,37 &	2,49\\
+3 & 31,49 &	1,90\\
+4 & 31,77 &	1,29\\
+5 & 32,18 &	0,72\\
+6 & 32,34 &	0,36\\
+\end{tabular}
+\end{minipage}
+\captionof{table}{Werte aus Abb. 12 mit bestimmtem $\Delta m$ für den Peak bei m/q = 28 (Stickstoff) und bei m/q = 32 (Sauerstoff) mit der FWHM-Methode}
+\end{center}
+
+\begin{center}
+\begin{minipage}[t]{0.49\textwidth}
+\includegraphics[width=\textwidth]{img/mq1}
+\end{minipage}
+\begin{minipage}[t]{0.49\textwidth}
+\includegraphics[width=\textwidth]{img/mq2}
+\end{minipage}
+\end{center}
+
+Abbildung 13: Lineare Regressionen der Daten aus Tabelle 6. Die Fehler wurden \hspace*{2,5cm} durch die Gauß’schen Fehlerfortpflanzung ermittelt. Dafür schätzten \hspace*{2,5cm} wir den Ablesefehler $\Delta(m/q)$ auf 0.1[u/e]. Die Steigungen betragen \hspace*{2,5cm} $2,07\pm 0,14$.
+
+Für die Erstellung von Abb. 12 wurde angenommen, dass die Massen sich in der Mitte der Peaks befinden. Dadurch konnten wir die FWHM-Methode anwenden. Es ist erkennbar, dass die Variation der Auflösung nichts am Verhältnis zwischen $\Delta$m und m ändert. Lediglich der Wert von m/q verschiebt sich und die Anzahl der Ionen, welche am Detektor eintreffen, sinkt. Anders ist es, wenn man $U_{FA}$ verändert. Dabei bleibt der m/q-Wert stabil und die Peaks der einzelnen Messungen nähern sich einander an (siehe Abb. 14). Bei dieser Auswertung gingen wir von den selben Voraussetzungen wie oben  aus. Für die Beschleunigungsspannung gilt $U_{B} = U_{FR}-U_{FA}$ und daraus folgt für die Anzahl der Schwingungen der Ionen aus Gl. 16, dass die Aufenthaltsdauer im Massenfilter für kleine $U_{FA}$ klein ist. Die Frequenz wurde für die Rechnungen auf 2,5MHz festgelegt und die Länge des Spektrometers betrug 0,1m. Die errechneten Werte für die $\Delta$m/q wurden in Abb. 14 über die Anzahl der Schwingungen $n$ aufgetragen. Im Rahmen der Ablesegenauigkeit von 0,1[U/e], verhalten sich die Werte wie in Tab. 6, sind also identisch.
+  
+\myImage[10cm]{img/Ufa}{Messung des Massenspektrums für Luft unter Variation der Spannung $U_{FA}$}
+
+\newpage
+\section{Zusammenfassung und Diskussion}
+In diesem Versuch wurde mit einem Quadrupolmassenspektrometer die Spektren von Argon, Aceton, Ethanol und Luft aufgenommen und untersucht. Die Durchführung verlief reibungslos und es traten keine Probleme auf.\\
+In den einzelnen Spektren wurden jeweils die erwarteten Ionen entdeckt.
