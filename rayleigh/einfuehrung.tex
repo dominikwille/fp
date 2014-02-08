@@ -9,10 +9,50 @@ Die Mie-Streuung, oder Mie-Theorie, resultiert aus der Lösung der Maxwell-Gleic
 x = \frac{2\pi r}{\lambda}
 \end{equation}
 
-Für den Fall, dass x$\approx$1 gilt, handelt es sich um Mie-Streuung. Dabei schwingen die Elektronen nicht in Phase und der Zusammenhang zwischen Lichtstreuung und dem Größenparameter $x$ ist aufgrund von Resonanzen o.ä. komplizierter. Bei x<<1 handelt es sich um Rayleigh-Streuung. In diesem Fall schwingen die Elektronen in Phase und das Teilchen kann als Herz'scher Dipol angenähert werden. 
-
-\subsection{Rayleigh-Streuung}
+Für den Fall, dass x$\approx$1 gilt, handelt es sich um Mie-Streuung. Dabei schwingen die Elektronen nicht in Phase und der Zusammenhang zwischen Lichtstreuung und dem Größenparameter $x$ ist aufgrund von Resonanzen o.ä. komplizierter. Bei x<<1 handelt es sich um Rayleigh-Streuung. In diesem Fall schwingen die Elektronen in Phase und das Teilchen kann als Herz'scher Dipol angenähert werden.
 
 \subsection{Wirkungsquerschnitt}
+Für die Intensität $I$ der Streuung gilt:
+
+\begin{equation}
+I = I_0 \cdot \sigma 
+\end{equation}
+
+mit dem wellenlängenabhängigen Wirkungsquerschnitt $\sigma$ und der Eingangsintensität $I_0$. Wird das Licht nicht nur an einem Partikel, sondern gleich an mehreren gestreut, so berechnet man Gesamtleistung aus der Superposition der Leistung der einzelnen Moleküle. Das erreicht man, indem man den Wirkungsquerschnitt mit der Teilchendichte $N$ multipliziert. Man erhält somit für den Streukoeffizienten $\beta$:
+
+\begin{equation}
+\beta(\lambda)= N \cdot \sigma(\lambda)
+\end{equation}
+
+Durch die Näherung der Moleküle als Herz'sche Dipole gilt für den Streukoeffizienten in Abhängigkeit von Lambda:
+
+\begin{equation}
+\beta(\lambda)= \frac{8\pi^3(n^2-1)^2}{3N\lambda^4}
+\end{equation}
+
+mit dem Brechungsindex n. Das $\lambda^4$ im Nenner dieser Gleichung ist hauptsächlich die Ursache für die effizientere Streuung von blauem Licht und die Färbung des Himmels. 
 
 \subsection{Cavity-Ring-Down-Spektroskopie}
+Das Prinzip einer CRDS basiert auf einem Laserimpuls, welcher zwischen zwei hoch reflektierenden Spiegeln hin und her geleitet wird. Das hat zur Folge, dass das Licht einen langen weg zurück legt, bevor es ausgekoppelt und detektiert wird. Dadurch machen sich schon geringe Streueffekte bemerkbar, denn es gilt:
+
+\begin{equation}
+I(t)=I_0 \cdot e^{-\frac{t}{\tau}}
+\end{equation}
+
+mit der Abklingkonstanten $\tau$. Es kann Rayleigh-Streuungen viel besser gemessen werden. Des Weiteren gilt für $\tau$ in einer evakuierten Kavität:
+
+\begin{equation}
+\tau_{0}=\frac{L}{c(1-R(\lambda))}
+\end{equation}
+
+mit der Lichtgeschwindigkeit $c$, der Länge des Resonators $L$ und der R für die Refelektivität der Spiegel. Füllt man die Kavität mit einem Luft, so wirkt sich der Streukoeffizient $\beta$ ebenfalls auf $\tau$ aus:
+
+\begin{equation}
+\tau= \frac{L}{c(1-R(\lambda)+L\beta(\lambda))}
+\end{equation}
+
+Daraus folgt für $\beta$ in Abhängigkeit der Abklingkonstanten:
+
+\begin{equation}
+\beta(\lambda)=\frac{1}{c}\left(\frac{1}{\tau(\lambda)}-\frac{1}{\tau_0(\lambda)}\right)
+\end{equation}
