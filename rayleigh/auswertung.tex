@@ -12,7 +12,7 @@ Im Bild sind die Originalwerte, sowie die Fitfunktion zu erkennen. Daraus ergab 
 \tau_{0}= (10.44 \pm 0.03)\mu s
 \end{equation}
 
-Der Fit zeigt einen genaueren Verlauf der Funktion mit der Abklingkonstante. Während des Experimentes ergab sich der Wert dafür 
+Der Fit zeigt einen genaueren Verlauf der Funktion mit der Abklingkonstante. Während des Experimentes mit dem Labview ergab sich der Wert dafür 
 \begin{equation}
 \notag
 \tau_{0/class}= (10.25 \pm 0.03)\mu s
@@ -21,3 +21,37 @@ Der Fit zeigt einen genaueren Verlauf der Funktion mit der Abklingkonstante. Wä
 \subsection{Luftgefüllte Kavität}
 
 \myImage[9cm]{img/mess1luft}{Luftgefüllte Messung}
+
+Für die luftgefüllte Messung bekamen wir nach dem Fitten der Parameter an eine exponentielle Funktion den folgenden Wert:
+
+\begin{equation}
+\notag
+\tau_{luft}= (9.05 \pm 0.04)\mu s
+\end{equation}
+
+Der im Experimentierwert während des Experiments ergab sich mit Labview zu:
+\begin{equation}
+\notag
+\tau_{luft/class}= (9.06 \pm 0.04)\mu s
+\end{equation}
+
+Nun wird noch überprüft, in wie weit die Werte mit dem Streukoeffizienten verträglich sind.
+
+\subsection{Bestimmung des Streukoeffizienten}
+
+Der theoretische Wert für den Streukoeffizient wird nach (6) berechnet. Der Literaturwert für den Brechungsindex n beträgt 1,000276. Für die Anzahl der Teilchen in der Luft sind wir von dem thermischen Gleichgewicht ausgegangen, d.h. $N = \frac{p}{k_B T}$. Der Druck betrug $(1018.1 \pm 0.5)hpa$. Die Temperatur war die normale Raumtemperatur von $(22 \pm 1)^{\circ}C$ Die Wellenlänge von dem Laser war durch $(405 \pm 2)nm$ vorgegeben. Also lautet der theoretische Wert für den Streukoeffizient
+
+\begin{equation}
+\notag
+\beta(\lambda)= (3.75 \pm 0.04) \times 10^{-5} m^{-1}
+\end{equation}
+
+Jetzt kann man den experimentellen Wert mit Gl.(9) bestimmen.
+\begin{equation}
+\notag
+\beta(\lambda)= (4.31 \pm 0.04) \times 10^{-5} m^{-1}
+\end{equation} 
+
+
+
+
