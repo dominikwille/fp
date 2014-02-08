@@ -33,13 +33,22 @@ Durch die Näherung der Moleküle als Herz'sche Dipole gilt für den Streukoeffi
 mit dem Brechungsindex n. Das $\lambda^4$ im Nenner dieser Gleichung ist hauptsächlich die Ursache für die effizientere Streuung von blauem Licht und die Färbung des Himmels. 
 
 \subsection{Cavity-Ring-Down-Spektroskopie}
-Das Prinzip einer CRDS basiert auf einem optischen Resonator, in dem ein Laserimpuls zwischen zwei hoch reflektierenden Spiegeln hin und her geleitet wird. Das hat zur Folge, dass das Licht einen langen weg zurück legt. Da es unmöglich ist Spiegel herzustellen, die total reflektierend sind wird immer ein kleiner Prozentsatz an Photonen ausgekoppelt und detektiert. Dadurch machen sich schon geringe Streueffekte bemerkbar, denn es gilt:
+Das Prinzip einer CRDS basiert auf einem optischen Resonator, in dem ein Laserimpuls zwischen zwei hoch reflektierenden Spiegeln hin und her geleitet wird.
+Resonatoren haben drei wichtige Eigenschaften: Der Freie Spektralbereich, die Finesse und der Gütefaktor.\\
+Der freie Spektralbereich gibt den Frequenzabstand verschiedener Moden an. Die Finesse sagt aus, in welchem Verhältnis der freie Spektralbereich zur Halbwertsbreite eines Maximums steht. Der Gütefaktor beschreibt die Dämpfung im Resonator bzw. die Bandbreite der Wellen. Daraus folgt, dass je höher der Gütefaktor eines Resonators ist, desto niedriger ist der Energieverlust. Die Energie fällt exponentiell ab und es gilt:
+
+\begin{equation}
+E(t) = E_0 \cdot e^{-\frac{\tau}{t}}
+\end{equation}
+
+mit der Abklingkonstanten $\tau$ welche die durchschnittliche Verweildauer der Photonen im Resonator beschreibt.\\ 
+Da es ist unmöglich ist Spiegel herzustellen die total reflektierend sind, wird immer ein kleiner Prozentsatz an Photonen ausgekoppelt und detektiert. Das hat zur Folge, dass sich schon geringe Streueffekte bemerkbar machen, denn für die Intensität gilt:
 
 \begin{equation}
 I(t)=I_0 \cdot e^{-\frac{t}{\tau}}
 \end{equation}
 
-mit der Abklingkonstanten $\tau$ welche die durchschnittliche Verweildauer der Photonen im Resonator beschreibt. Durch den exponentiellen Abfall der Intensität, kann Rayleigh-Streuungen viel besser gemessen werden. Des Weiteren gilt für $\tau$ in einer evakuierten Kavität:
+Durch den exponentiellen Abfall der Intensität, kann Rayleigh-Streuungen viel besser gemessen werden. Des Weiteren gilt für $\tau$ in einer evakuierten Kavität:
 
 \begin{equation}
 \tau_{0}=\frac{L}{c(1-R(\lambda))}
