@@ -1,0 +1,50 @@
+\message{ !name(gama.tex)}\documentclass[a4paper, parskip=half]{scrartcl}
+\input{../fp}
+
+\newcommand{\myPackage}[1]{%
+  \textit{#1}-Paket%
+}
+
+\newcommand{\myFormat}[1]{%
+  \textit{#1}%
+}
+
+\newcommand{\myPath}[1]{%
+  \textit{#1}%
+}
+
+\textsc{}\newcommand{\myTitle}{Ba 2: Gammaspektrometrie}
+\newcommand{\myAuthor}{Artem Gerassimoff, Alexander Heinisch, Dominik Wille}
+\newcommand{\myDate}{\today}
+\newcommand{\exDate}{20.11.2013 10-14 Uhr}
+\newcommand{\exDoc}{Svitlana Trotsenko}
+\newcommand{\myTitleImage}{img/rad}
+\newcommand{\myTitleLeft}{%
+   \textbf{Freie Universität Berlin}\\
+   Fachbereich Physik\\
+   Physikalisches Fortgeschrittenenpraktikum%
+}
+\newcommand{\myTitleRight}{%
+  \textbf{Kontaktadressen:}\\
+  \myMail{dominik.wille@fu-berlin.de} \\
+  \myMail{matthias.heinisch@gmx.de} \\
+  \myMail{art.geras@gmail.com}
+}
+
+\begin{document}
+
+\message{ !name(gama.tex) !offset(-3) }
+
+\myTitlepage
+\tableofcontents
+\newpage
+
+	\input{einfuehrung}
+
+\newpage
+	\input{durch}
+
+\newpage
+\end{document}
+
+\message{ !name(gama.tex) !offset(-50) }

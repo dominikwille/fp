@@ -1,2 +1,15 @@
-\section{Durchführung}
+\section{Versuchsaufbau und Justage}
 
+Das Experiment soll folgendermaßen verlaufen: Der gepulste Laserstrahl wird in die Kavität geleitet. Das ausgekoppelte Signal gelangt über einen Filter zu dem Photomultiplier. Der Verstärker leitet dieses Signal weiter zum Oszilloskop, wo auch das Lasersignal sichtbar gemacht wird. Die Signale des Oszilloskops werden am PC aufgezeichnet und ausgewertet. Über die Pumpe und Ventile kann die Kavität geleert oder mit Luft gefüllt werden. Zudem lässt sich der Laser über den PC steuern.
+
+Als erstes haben wir den grünen Laser montiert, um die den Aufbau zu justieren. Die Pumpe wurde für einige Zeit eingeschaltet, bis ein Vakuum in der Kavität erzeugt wurde. Anschließend war es wichtig darauf zu achten, dass die beiden Irisblenden genau auf einer Höhe waren und in derselben Position standen. Die irisblenden wurden nacheinander geöffnet, damit sichergestellt wurde, dass der Strahlengang Mittig verlief. Der erste Spiegel wurde so eingestellt, dass die Reflexion des Laserstrahls auf den Ausgangsstrahl zurückfielen. Mit dem zweiten Spiegel sammelten wir alle entstandene Moden und fokussierten sie auf einen Punkt, um möglichst wenige Artefakte zu erhalten, welche später die Messung negativ beeinflussen würden. Als der Strahlengang für den grünen Laser soweit justiert war, bauten wir diesen ab und ersetzten ihn durch den Messlaser. Da dieser jedoch eine andere Wellenlänge besitzt (405 nm) musste die Apparatur nachjustiert werden. Nachdem die Kavität mit Luft gefüllt wurde, musste die Apparatur wieder nachjustiert werden, da sich die Änderung des Druck auf die Spiegel ausübt\\
+Die beiden Laser waren während dem justieren auf cw-Einstellung (continuous wave) eingestellt. Bei den Messungen schalteten wir auf den gepulsten Modus. In der Folgenden Abbildung wird der Aufbau des CRDS schematisch dargestellt. Die Irisblenden sind darin nicht eingezeichnet. Sie befinden sich zwischen dem Laser und der Kavität.
+
+\myImage[9cm]{img/aufbau}{Aufbau der Messapparatur}
+
+
+\section{Durchführung}
+Die Messung wurde mit dem violetten Laser im gepulsten Modus durchgeführt. Die Pulsbreite der Signale wurde über den Delay-Generator geregelt und mithilfe des Oszilloskops an die Signale des Photomultipliers angepasst (siehe Abb.1). Um ein rauschfreies Signal zu erhalten, wurde es am Oszilloskop gemittelt. Die ermittelten Rohdaten konnten wir mit dem Labview-Programm ansehen. 
+
+Im ersten Durchgang führten wir die Messungen mit der evakuierter Kavität durch. Es wurden die Laserpulse gestartet und ein Abklingsignal aufgenommen. Dabei stellten wir fest, dass wir keine Photonen am Detektor und somit keine Spannung am Oszilloskop wahrnahmen. Der Grund lag an der fehlerhaften Einstellung von einem der Spiegel. Deswegen musste die Justage wiederholt werden. Beim Zweiten Versuch erhielten wir deutlich bessere Messergebnisse. Mit dem Labview-Programm wurde die Güte des Abklingverhalten überprüft.\\ 
+Als nächstes wurde eine Messung mit Luft in der Kavität durchgeführt, wobei auch hier zuerst neu justiert wurde. Die Luft wurde durch das Ventil mit Filter eingelassen. Dabei wurde über mehrere Messungen gemittelt.
