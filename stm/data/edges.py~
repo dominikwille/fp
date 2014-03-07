@@ -1,0 +1,11 @@
+#!/usr/local/bin/python
+# -*- coding: utf-8 -*-
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+edges = [150, 300, 350, 350, 400, 700, 700, 900, 1100, 1100]
+x = [0,1,2,3,4,5,6,7,8,9]
+
+plt.plot(x, edges)
+plt.show()

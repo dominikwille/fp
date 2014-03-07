@@ -1,0 +1,109 @@
+\message{ !name(stm.tex)}\documentclass[a4paper, parskip=half]{scrartcl}
+\input{../fp}
+\usepackage[english]{babel}
+%% \usepackage[paperwidth=15cm, paperheight=20cm]{geometry}
+
+\newcommand{\myPackage}[1]{%
+  \textit{#1}-Paket%
+}
+
+\newcommand{\myFormat}[1]{%
+  \textit{#1}%
+}
+
+\newcommand{\myPath}[1]{%
+  \textit{#1}%
+}
+
+\newcommand{\myTitle}{Ba 10: Scanning tunneling microscope}
+\newcommand{\myAuthor}{Artem Gerassimoff, Alexander Heinisch, Dominik Wille}
+\newcommand{\myDate}{\today}
+\newcommand{\exDate}{02/05/2013 10am-2pm}
+\newcommand{\exDoc}{Benjamin Heinrich}
+\newcommand{\myTitleImage}{}
+\newcommand{\myTitleLeft}{%
+   \textbf{Freie Universität Berlin}\\
+   Departement of physics\\
+   Physikalisches Fortgeschrittenenpraktikum%
+}
+\newcommand{\myTitleRight}{%
+  \textbf{Contact information:}\\
+  \myMail{dominik.wille@fu-berlin.de} \\
+  \myMail{matthias.heinisch@gmx.de} \\
+  \myMail{art.geras@gmail.com}
+}
+
+\begin{document}
+
+\message{ !name(stm.tex) !offset(-3) }
+
+\begin{titlepage}
+\begin{center}
+    \vspace{5cm}
+    \huge\bfseries
+    \myTitle
+    \vspace{1cm}
+
+    \large\normalfont by
+
+    \bigskip
+    \textbf{\myAuthor}
+
+    \myDate
+
+    \vspace{1cm}
+    
+    \large\normalfont
+    experiment execution on
+
+    \textbf{\exDate}
+    \vspace{1cm}
+    
+    docent
+
+    \textbf{\exDoc}
+    
+    
+  \end{center}
+  \vfill
+  \enlargethispage{2cm}
+  \parbox[t]{0.55\textwidth}{%
+   \myTitleLeft
+  }
+  \parbox[t]{0.45\textwidth}{\raggedleft%
+    \myTitleRight
+}
+\end{titlepage}
+\tableofcontents
+\newpage
+\section{Introduction}
+The \textbf{Scanning tunneling microscope} short STM is a powerful method to determine information about the structure of soild bodies in the atomic scale.
+
+\section{The principle of the Scanning tunneling microscope}
+The principle of the STM is based on the quantum mechanical tunneling effect. In this case a cunducting needle is used to scan the surface of a cundicting body's surface. The needle should never hit the body but it should be so close to it ($<10\text{A}$) so that there is notable tunneling current of electrons from the needle to the body. Therefore a electrical Potential from the needle to the body is needed in this experminent it will be in the $\text{mV}$-scale.
+
+\subsection{Theoretical description}
+Generally the tunneling current $I_t$ is proportional to the chance an electron overcomes the energy barrier given by the Work function.
+\begin{align}
+  I_t \propto V_t \cdot e^{-c \cdot \sqrt{\phi} \cdot s}
+\end{align}
+The wave-function of electrons in the solid body should fulfill the boundady condition that it is zery at the surface of the body. Moreover the wave-function of electrons in the body can be discriped as
+\begin{align}
+\psi = \psi_0 \cdot e^{-\chi z}
+\end{align}
+Where $\chi$ is discribes how fast the wave function decreases. Usually that depends on the material and has the largest values close to the fermi temperature. 
+
+\subsection{Piezoelectric plates}
+The aim is to get a 3-dimensional image of the surface, so it's needed to vary the position the position of the needle in the atomic scale. To do that piezoelectric plates are used which can be controlled by a current floating through them. a
+
+
+\section{Experimental observation}
+    
+\begin{thebibliography}{999}
+%% \bibitem{quadrupole_img} Taken From Das elektrische Massenfilter als Massenspektrometer W. PAUL, H. P. REINHARD und U. VON ZAHN
+%% \bibitem{stable1} Taken From Wolfgang Demtröder - Experimental physics 3
+
+\end{thebibliography}
+\end{document}
+
+\message{ !name(stm.tex) !offset(-109) }
