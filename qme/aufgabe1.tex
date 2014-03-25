@@ -1,5 +1,4 @@
-\subsection{Aufgabe 1 - Einschalten des Versuchsaufbaus}
-Die Geräte wurde von unserem Versuchsleiter eingeschaltet und er wies uns in die Funktionsweise der Geräte ein. Danach stellten wir die Spannungen $U_{FR}$, $U_{KA}$ und $U_{FA}$ auf die folgenden Werte ein:
+Wir stellten die Spannungen $U_{FR}$, $U_{KA}$ und $U_{FA}$ auf die folgenden Werte ein:
 
 \begin{tabular}{l l l}
 $U_{FR}$ & = $113\pm 2$ V & (Beschleunigungsspannung)\\
@@ -7,14 +6,13 @@ $U_{KA}$ & = 0V & (Glühkathode)\\
 $U_{FA}$ & = $106\pm 0,5$V & (Massenfilters)\\
 \end{tabular}
 
-Diese Werte wurden während der folgenden Messung nicht mehr verändert. 
-Es gelang uns, den Druck während den Messungen konstant zu halten. Da auch bei mehreren Messungen des selben Gases keine Schwankungen des m/q-Wertes auftraten, nahmen wir diesen Fehler als vernachlässigbar klein an und wird in der folgenden Auswertung nicht berücksichtigt.
+Diese Werte wurden während der folgenden Messung bis zur Bearbeitung der letzten Aufgabe nicht mehr verändert. 
+Es gelang uns, den Druck während den Messungen konstant zu halten.
 
 \subsection{Restgas-Messung}
-Bei dieser Messung machten wir uns mit dem Programm LabView vertraut und stellten die Verstärkung auf $10^{-10}$. Der Druck betrug dabei $8,9 \cdot 10^{-6}$ mbar. Zudem schlossen wir Ventil V3, öffneten das Ventil V4 und nahmen mehrere Messungen von dem Restgas. In Abb. 7 und in Tab. 1 werden die gemittelten Ergebnisse dieser Messungen dargestellt.\\
-Aus [4] wissen wir, dass der Peak bei m/q=18 für den Wasseranteil in dem Gas steht. Das liegt daran, dass in dem Rezipienten immer ein geringer Wasseranteil vorhanden ist, der sich, wenn das Gerät ausgeschaltet ist, auf der Glühkathode niederschlägt.
+Bei dieser Messung machten wir uns mit dem LabView-Programm vertraut und stellten die Verstärkung auf $10^{-10}$. Der Druck betrug dabei $8,9 \cdot 10^{-6}$ mbar. Zudem schlossen wir Ventil V3, öffneten das Ventil V4 und nahmen die Messung von dem Restgas. In Abb. 5 und in Tab. 1 werden die Ergebnisse dieser Messung dargestellt. Aus [4] und anhand der Periodentabelle wissen wir, dass der Peak bei m/q=18 für den Wasseranteil in dem Gas steht.
 
-\myImage[9cm]{img/RGbalk}{Überarbeitete Daten aus der Restgasmessung}
+\myImage[7cm]{img/RGbalk}{Überarbeitete Daten aus der Restgasmessung}
 
 \begin{center}
 \begin{tabular}{c|c|c}
@@ -37,8 +35,8 @@ m/q [u/e] & p [$10^{-7} mbar$] & Ionen\\
 \captionof{table}{Ergebnisse der Messung von dem Restgas bei einem Druck von $8,9\cdot 10^{-6}mbar$ mit errechneten Partialdrücke p und Zuordnung zu Ionen}
 
 \subsection{Testgas 1 - Dosierung und Messung}
-Über das Ventil V1A-D wurde das Testgas (in diesem Fall Argon) in die Vorkammer gelassen, bis die Nadel am Druckmessgerät einmal kurz ausschlug. Anschließend öffneten wir das Ventil V2 und das Dosierventil vorsichtig, damit das Gas in den Rezipienten gelangen konnte. Nun stellten wir den Emissionsstrom der Glühkathode auf 0,2 mA, warteten kurz bis der Druck im Rezipienten konstant blieb und notierten ihn. Anschließend starteten wir am PC das Messprogramm. Als dieses fertig war, schlossen wir das Ventil V4 und das Dosierventil und öffneten vorsichtig das Ventil V3. Wir warteten dann 10 Minuten, bis die Pumpe den Rezipienten wieder leerte. Diesen Vorgang wiederholten wir für alle Messungen\\
-Um die Messdaten auszuwerten, änderten wir die Vorzeichen der Häufigkeiten und stellten die Graphen durch Balken dar. Anschließend berechneten wir die lokalen Maxima und den Partialdruck der entsprechenden Ionen. Die Zuordnung zu den Ionen erfolgte durch [4]. Die Ergebnisse sind in Abb. 8 und in Tab. 2 dargestellt:\\
+Über die Ventile wurde das Testgas (in diesem Fall Argon) in die Vorkammer gelassen. Anschließend starteten wir das Messprogramm und nahmen die Werte auf. Nun leerten wir den Rezipienten wieder und warteten dann 10 Minuten. Diesen Vorgang wiederholten wir für alle Messungen\\
+Die Zuordnung zu den Ionen erfolgte durch [4] und mithilfe des Periodensystems der Elemente. Die Ergebnisse sind in Abb. 6 und in Tab. 2 dargestellt:\\
 
 \myImage[9cm]{img/AGbalk}{Massenspektrum von Argon}
 
@@ -66,7 +64,7 @@ m/q [u/e] & p [$10^{-7} mbar$] & Ionen\\
 \captionof{table}{Ergebnisse der Messung von Argon bei einem Druck von $4,0\cdot 10^{-6}mbar$ mit errechneten Partialdrücke p und Zuordnung zu Ionen}
 
 \subsection{Testgas 2, 3 und Luft - Dosierung und Messung}
-Bei der Messung dieser Gase sind wir wie oben beschrieben vorgegangen. Die Ergebnisse dieser Messungen werden in den folgenden Abbildungen 9, 10 und 11, sowie in den Tabellen 3, 4 und 5 dargestellt.
+Bei der Messung dieser Gase sind wir wie oben beschrieben vorgegangen. Die Ergebnisse dieser Messungen werden in den folgenden Abbildungen 7, 8 und 9, sowie in den Tabellen 3, 4 und 5 dargestellt.
 
 \myImage[9cm]{img/ACbalk}{Massenspektrum von Aceton}
 
@@ -193,10 +191,10 @@ Daraus folgt:
 Und somit für m/$\Delta$ m:
 
 \begin{equation}
-\frac{m}{\Delta m} = \frac{2}{(b_1+b_2)\cdot \left(\frac{1}{b_1}-\frac{1}{b_2}\right)} = \frac{2}{\frac{b_2}{b_1}-\frac{b_1}{b_2}} = \text{const.}
+\frac{m}{\Delta m} = \frac{2}{(b_1+b_2)\cdot \left(\frac{1}{b_1}-\frac{1}{b_2}\right)} = \frac{2}{\frac{b_2}{b_1}-\frac{b_1}{b_2}}
 \end{equation}
 
-Geht man davon aus, dass $\Delta$m mit der Beschleunigungsspannung zusammenhängt, ergibt sich für Ionen im Filter eine Geschwindigkeit von:
+Man kann also von einer konstanten Massenauflösung ausgehen. Geht man davon aus, dass $\Delta$m mit der Beschleunigungsspannung zusammenhängt, ergibt sich für Ionen im Filter eine Geschwindigkeit von:
 
 \begin{equation}
 v=\sqrt{\frac{2qU_B}{m}}
@@ -211,7 +209,17 @@ n = \frac{f\cdot l}{v}= f\cdot l \cdot \sqrt{\frac{m}{2qU_B}}
 mit der Frequenz $f$ und der Länge $l$ des Massenfilter.\\
 Es wurden zwei Messungen mit Luft als Testgas durchgeführt, um diese Relationen zu untersuchen. Dabei variierte bei der ersten Messung der Wert von $a$ und bei der Zweiten der Wert von $U_{FA}$.
 
-\myImage[10cm]{img/VAR}{Messung des Massenspektrums für Luft unter Variation der Auflösung a}
+\begin{figure}[h]
+\centering
+\begin{subfigure}{0.49\textwidth}
+\includegraphics[width=\textwidth]{img/VAR}
+\caption{Messung des Massenspektrums für Luft unter Variation der Auflösung a}
+\end{subfigure}
+\begin{subfigure}{0.49\textwidth}
+\includegraphics[width=\textwidth]{img/Ufa}
+\caption{Messung des Massenspektrums für Luft unter Variation der Spannung $U_{FA}$}
+\end{subfigure} 
+\end{figure}
 
 \begin{center}
 \begin{minipage}{0.25\textwidth}		
@@ -236,27 +244,24 @@ a & m/q & $\Delta m$\\
 6 & 32,34 &	0,36\\
 \end{tabular}
 \end{minipage}
-\captionof{table}{Werte aus Abb. 12 mit bestimmtem $\Delta m$ für den Peak bei m/q = 28 (Stickstoff) und bei m/q = 32 (Sauerstoff) mit der FWHM-Methode}
+\captionof{table}{Werte aus Abb. 10 mit bestimmtem $\Delta m$ für den Peak bei m/q = 28 (Stickstoff) und bei m/q = 32 (Sauerstoff) mit der FWHM-Methode}
 \end{center}
 
-\begin{center}
-\begin{minipage}[t]{0.49\textwidth}
+\begin{figure}[h]
+\centering
+\begin{subfigure}{0.49\textwidth}
 \includegraphics[width=\textwidth]{img/mq1}
-\end{minipage}
-\begin{minipage}[t]{0.49\textwidth}
+\end{subfigure}
+\begin{subfigure}{0.49\textwidth}
 \includegraphics[width=\textwidth]{img/mq2}
-\end{minipage}
-\end{center}
-
-Abbildung 13: Lineare Regressionen der Daten aus Tabelle 6. Die Fehler wurden \hspace*{2,5cm} durch die Gauß’schen Fehlerfortpflanzung ermittelt. Dafür schätzten \hspace*{2,5cm} wir den Ablesefehler $\Delta(m/q)$ auf 0.1[u/e]. Die Steigungen betragen \hspace*{2,5cm} $2,07\pm 0,14$.
+\end{subfigure} 
+\caption{Lineare Regressionen der Daten aus Tabelle 6. Die Fehler wurden durch die Gauß’schen Fehlerfortpflanzung ermittelt. Dafür schätzten wir den Ablesefehler $\Delta(m/q)$ auf 0.1[u/e]. Die Steigungen betragen $2,07\pm 0,14$.}
+\end{figure}
 
 Für die Erstellung von Abb. 12 wurde angenommen, dass die Massen sich in der Mitte der Peaks befinden. Dadurch konnten wir die FWHM-Methode anwenden. Es ist erkennbar, dass die Variation der Auflösung nichts am Verhältnis zwischen $\Delta$m und m ändert. Lediglich der Wert von m/q verschiebt sich und die Anzahl der Ionen, welche am Detektor eintreffen, sinkt. Anders ist es, wenn man $U_{FA}$ verändert. Dabei bleibt der m/q-Wert stabil und die Peaks der einzelnen Messungen nähern sich einander an (siehe Abb. 14). Bei dieser Auswertung gingen wir von den selben Voraussetzungen wie oben  aus. Für die Beschleunigungsspannung gilt $U_{B} = U_{FR}-U_{FA}$ und daraus folgt für die Anzahl der Schwingungen der Ionen aus Gl. 16, dass die Aufenthaltsdauer im Massenfilter für kleine $U_{FA}$ klein ist. Die Frequenz wurde für die Rechnungen auf 2,5MHz festgelegt und die Länge des Spektrometers betrug 0,1m. Die errechneten Werte für die $\Delta$m/q wurden in Abb. 14 über die Anzahl der Schwingungen $n$ aufgetragen. Im Rahmen der Ablesegenauigkeit von 0,1[U/e], verhalten sich die Werte wie in Tab. 6, sind also identisch.
-  
-\myImage[10cm]{img/Ufa}{Messung des Massenspektrums für Luft unter Variation der Spannung $U_{FA}$}
 
 \myImage[10cm]{img/delta_m_n}{Darstellung der Halbwertsbreiten über der Anzahl der Schwingungen. Der Fehler wurde auf 0.1u/e geschätzt.}
 
-\newpage
 \section{Zusammenfassung und Diskussion}
 In diesem Versuch wurde mit einem Quadrupolmassenspektrometer die Spektren von Argon, Aceton, Ethanol und Luft, aufgenommen und untersucht. Die Durchführung verlief reibungslos und es traten keine Probleme auf.\\
 In den einzelnen Spektren wurden jeweils die erwarteten Ionen entdeckt. Die theoretische Herleitung des Auflösungsvermögens lieferte den erwarteten konstanten Zusammenhang zwischen m und $\Delta$m.\\

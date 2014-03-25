@@ -1,17 +1,16 @@
 \section{Ziele des Versuchs}
-In diesem Versuch sollen anhand des Quadrupol-Massenspektrometers (QMS) die Methoden der Massenspektrometrie und die Grundlagen der Vakuum-Physik vermittelt werden. Die Massenspektroskopie ist ein wichtiges Analyseverfahren, um die Struktur und die Zusammensetzung verschiedener chemischer Elemente und Gemische zu untersuchen.\\
-In der Physik setzt man Massenspektrometer ein, um Informationen über Isotopenzusammensetzungen verschiedener chemischer Elemente zu erhalten.
+In diesem Versuch sollen anhand des Quadrupol-Massenspektrometers (QMS) die Methoden der Massenspektrometrie und die Grundlagen der Vakuum-Physik vermittelt werden. Die Massenspektrometrie ist ein wichtiges Analyseverfahren, um die Struktur und die Zusammensetzung verschiedener chemischer Elemente und Gemische zu analysieren.\\
 
 \section{Theoretische Grundlagen}
 \subsection{Der Quadrupol-Massenspektrometer}
-Ein Quadrupol-Massenspektrometer erzeugt ein elektrisches Feld. Je nach Stärke der anliegenden Felder und dem Ladungs-/Massenverhältnis der Ionen, bewegen sie sich auf stabilen oder instabilen Bahnen. Abhängig davon wie diese Parameter variiert werden, gelangen verschiedene Ionen auf stabile Bahnen und auf diesen durch den QMS. Diesen Filtervorgang nennt man Massenfiltern.\\
-Der Quadrupol-Massenspektrometer befindet sich dabei in einer Vakuum-Kammer (Rezipient), um ungewollte Stöße der Ionen mit anderen Teilchen zu vermeiden. Dieses Vakuum wird mit zwei Pumpen erzeugt (siehe Abb. 1) Die Ionen treffen schließlich auf einen Detektor, der den Ionenstrom misst und die Daten an einen Computer weitersendet. Mit Hilfe eine Software (in unserem Fall LabView) werden anschließend die Daten ausgewertet.
+Ein Quadrupol-Massenspektrometer erzeugt ein statisches elektrisches Feld. Je nach Stärke des Feldes und dem Ladungs-/Massenverhältnis der Ionen, bewegen sie sich auf stabilen oder instabilen Bahnen. Abhängig davon wie die Spannung variiert wird, gelangen Ionen verschiedener Ladungs/-Massenverhältnisse auf stabile Bahnen und auf diesen durch den QMS. Diesen Filtervorgang nennt man Massenfiltern.\\
+Das Quadrupol-Massenspektrometer befindet sich dabei in einer Vakuum-Kammer (Rezipient), um ungewollte Stöße der Ionen mit anderen Teilchen zu vermeiden. Dieses Vakuum wird mit zwei Pumpen erzeugt (siehe Abb. 1). Die Ionen treffen schließlich auf einen Detektor, der den Ionenstrom misst und die Daten an einen Computer weitersendet. Mit Hilfe eine Software (in unserem Fall ein LabView-Programm) werden anschließend die Daten ausgewertet.
 
 \myImage[13cm]{img/qme1}{Quadrupolmassenspektrometer (a) Äquipotentiallinien; (b) hyperbolische Elektroden [3]}
 
 \newpage
 \subsection{Die Mathieuschen Differentialgleichung}
-Die jeweils gegenüberliegenden Stäbe werden elektrisch miteinander verbunden und paarweise an den positiven bzw. negativen Pol einer variablen Spannungsquelle angeschlossen. Zudem werden Wechselspannungsfelder ($f \approx 10^8$ Hz) mit einer Phasendifferenz zwischen den Stabpaaren von $\phi = 180^{\circ}$\\ überlagert
+Die jeweils gegenüberliegenden Stäbe werden elektrisch miteinander verbunden und paarweise an den positiven bzw. negativen Pol einer variablen Spannungsquelle angeschlossen. Zudem werden Wechselspannungsfelder ($f \approx 10^8$ Hz) mit einer Phasendifferenz zwischen den Stabpaaren von $\phi = 180^{\circ}$ überlagert.
 Wolfgang Paul beschrieb das Potential eines Quadrupols in kartesischen Koordinaten durch folgende Gleichung [1]:
 
 \begin{equation}
@@ -46,7 +45,7 @@ Die elektrische Feldstärke $\mathbf{E}$ errechnet sich aus der Gleichung $-\mat
 \right)
 \end{equation}
 
-Bei konstantem $\Phi_{0}$ hat dies zur Folge, dass die Ionen in diesem Feld eine harmonische Schwingung in der x-y-Ebene vollführen. In z-Richtung jedoch wird die Kraft auf die Ionen exponentiell größer. Um dieses Problem zu lösen, legt man als Potential $\Phi_{0}$ neben der Gleichspannung U noch eine Wechselspannung V an. Damit gilt für $\Phi_{0}$:
+Die $E_x$-Komponente bewirkt, dass die Ionen eine sinusförmige Schwingung in der x-y-Ebene ausführen. Die $E_z$-Komponente bewirkt jedoch, dass das Ion exponentiell beschleunigt wird. Um dem entgegen zu wirken, wird ein Potential $\Phi_0$ benutzt, welches sich aus einer Gleich- und einer Wechselspannung zusammensetzt: 
 
 \begin{equation}
 \Phi_{0}=U + V cos(\omega t)
@@ -65,7 +64,7 @@ Das Feld im QMS (siehe Abb. 1 a)) ist ein periodisches inhomogenes Feld, weswege
 \begin{equation}
 \frac{d^{2}x}{t\tau^{2}}+(a_{x}+2q_{x}cos (2\tau)) x = 0
 $$\\$$
-\frac{d^{2}z}{t\tau^{2}}+(a_{z}+2q_{z}cos (2\tau)) z = 0
+\frac{d^{2}z}{t\tau^{2}}-(a_{z}+2q_{z}cos (2\tau)) z = 0
 \end{equation}
 
 Aus dem Vergleich mit den Gleichungen (6) folgt, dass für die Parameter $a_{x}$, $a_{z}$, $q_{x}$, $q_{z}$ und $\tau$ folgendes gelten muss:
@@ -76,16 +75,34 @@ a_{x} = -a_{z} = \frac{4eU}{mr_{0}^{2}\omega^{2}},\qquad q_{x}= -q_{z}= \frac{4e
 
 Die Differentialgleichungen haben somit zwei Arten von Lösungen. Bei der einen Lösung bewegen sich die Ionen auf stabilen Bahnen. Sie oszillieren in x-z-Richtung und gelangen durch den Quadrupolfilter ohne die Elektroden zu berühren. Bei der zweiten Lösung vergrößert sich die Amplitude der Ionen in x-z-Richtung exponentiell. Dadurch bewegen sich die Ionen auf instabilen Bahnen und kollidieren mit den Elektroden (siehe Abb. 2 und 3)
 
-\myImage[7cm]{img/xzs}{Beispiel für eine stabile Bahn}
+\vspace{1cm}
 
-\myImage[7cm]{img/xzi}{Beispiel für eine instabile Bahn}
+\begin{figure}[h]
+\centering
+\begin{subfigure}{0.4\textwidth}
+\includegraphics[width=\textwidth]{img/xzs}
+\end{subfigure}
+\begin{subfigure}{0.4\textwidth}
+\includegraphics[width=\textwidth]{img/xzi}
+\end{subfigure} 
+\caption{Beispiel für eine stabile (links) und instabile Bahn (rechts)}
+\end{figure}
 
 \subsection{Stabilitätsdiagramme}
-Um die Bewegung der Ionen durch den Quadrupol mathematisch-physikalisch zu beschreiben, benutzt man einen Plot, in dem man q über a aufträgt (siehe Abb. 4, q entspricht hier b). Das Verhältnis zwischen a und q beträgt konstant $\frac{2U}{V}$. Verändert man nur die Spannungen in einem gewissen Verhältnis zueinander, bewegt man sich auf der Arbeitsgeraden. Alle a/q-Werte, die stabile Flugbahnen durch den Quadrupol ergeben, liegen in Abb. 5 innerhalb des eingefärbten Feldes. Die Masse des Ions legt das Maximum des Stabilitätsfeldes fest. Durch diese Methode gelangt eine Masse nach der anderen in den Bereich stabiler Oszillationen und kann detektiert werden.
+Um die Bewegung der Ionen durch den Quadrupol mathematisch-physikalisch zu beschreiben, benutzt man einen Graphen, in dem man q über a aufträgt (siehe Abb. 3, q entspricht hier b). Das Verhältnis $\frac{a}{q}=\frac{2U}{V}$ hängt nicht von der Masse der Ionen ab. Somit liegen alle Ionen verschiedener Massen im Stabilitätsdiagramm auf einer Geraden die durch den Nullpunkt geht. Variiert man U und V, so verändert man die Steigung der Arbeitsgeraden. Alle a/q-Werte, die stabile Flugbahnen durch den Quadrupol ergeben, liegen in Abb. 3 innerhalb des eingefärbten Feldes. Wird das Verhältnis von $\frac{U}{V}$ erhöht, desto größer wird die Steigung der Arbeitsgeraden und umso keiner wird das q-Intervall ($\Delta b$ in Abb. 3), bis nur noch Ionen einer bestimmten Masse auf stabilen Bahnen durch den Massenfilter zum Detektor gelangen.
 
-\myImage[9cm]{img/stab}{Komplettes Stabilitätsdiagramm}
+\vspace{1cm}
 
-\myImage[7cm]{img/qme2}{Beispiel eines Stabilitätsdiagramms 1. Ordnung}
+\begin{figure}[h]
+\centering
+\begin{subfigure}{0.40\textwidth}
+\includegraphics[width=\textwidth]{img/stab}
+\end{subfigure}
+\begin{subfigure}{0.40\textwidth}
+\includegraphics[width=\textwidth]{img/qme2}
+\end{subfigure}
+\caption{Stabilitätsdiagramme} 
+\end{figure}
 
 Um die Massen zu unterscheiden, definiert man die sogenannte Massenauflösung mit der Formel:
 \begin{equation}
@@ -95,7 +112,6 @@ M = \frac{m}{\Delta m}
 wobei $\Delta m$ die kleinste  auflösbare Massendifferenz ist.
 
 \section{Versuchsaufbau}
-Der QMS muss während des Versuchs in einer Vakuum-Kammer sein. Das Vakuum wird durch eine Turbomolekularpumpe erzeugt. Um diese vor Schaden zu beschützen, ist dieser eine Membranpumpe vorgeschalten. Die Werte für den Druck liefert ein Druck-Messgerät, welches am Rezipienten angeschlossen ist. Die Testgase können über ein Feinriegelventil in den Rezipienten eingelassen werden. In der folgenden Skizze ist der Aufbau schematisch dargestellt:
+Das QMS muss während des Versuchs in einer Vakuum-Kammer sein. Das Vakuum wird durch eine Membran- und einer Turbomolekularpumpe erzeugt. Die Werte für den Druck liefert ein Druck-Messgerät, welches im Rezipienten angeschlossen ist. Die Testgase können über ein Feinriegelventil in den Rezipienten eingelassen werden. In der folgenden Skizze ist der Aufbau schematisch dargestellt:
 
-\myImage[7cm]{img/aufbau}{Experimenteller Aufbau [3]}
-
+\myImage[6cm]{img/aufbau}{Experimenteller Aufbau [3]}
