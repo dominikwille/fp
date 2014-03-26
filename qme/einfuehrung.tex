@@ -3,8 +3,8 @@ In diesem Versuch sollen anhand des Quadrupol-Massenspektrometers (QMS) die Meth
 
 \section{Theoretische Grundlagen}
 \subsection{Der Quadrupol-Massenspektrometer}
-Ein Quadrupol-Massenspektrometer erzeugt ein statisches elektrisches Feld. Je nach Stärke des Feldes und dem Ladungs-/Massenverhältnis der Ionen, bewegen sie sich auf stabilen oder instabilen Bahnen. Abhängig davon wie die Spannung variiert wird, gelangen Ionen verschiedener Ladungs/-Massenverhältnisse auf stabile Bahnen und auf diesen durch den QMS. Diesen Filtervorgang nennt man Massenfiltern.\\
-Das Quadrupol-Massenspektrometer befindet sich dabei in einer Vakuum-Kammer (Rezipient), um ungewollte Stöße der Ionen mit anderen Teilchen zu vermeiden. Dieses Vakuum wird mit zwei Pumpen erzeugt (siehe Abb. 1). Die Ionen treffen schließlich auf einen Detektor, der den Ionenstrom misst und die Daten an einen Computer weitersendet. Mit Hilfe eine Software (in unserem Fall ein LabView-Programm) werden anschließend die Daten ausgewertet.
+Ein Quadrupol-Massenspektrometer erzeugt ein statisches elektrisches Feld. Je nach Stärke des Feldes und dem Ladungs-/Massenverhältnis der Ionen, bewegen sich diese auf stabilen oder instabilen Bahnen. Abhängig davon wie die Spannung variiert wird, gelangen Ionen verschiedener Ladungs/-Massenverhältnisse auf stabile Bahnen und auf diesen durch den QMS. Diesen Filtervorgang nennt man Massenfiltern.\\
+Das Quadrupol-Massenspektrometer befindet sich dabei in einer Vakuum-Kammer (Rezipient), um ungewollte Stöße der Ionen mit anderen Teilchen zu vermeiden und um zu gewährleisten, dass die Ionen auch wirklich den Detektor erreichen. Dieses Vakuum wird mit zwei Pumpen erzeugt (siehe Abb. 1). Der Detektor misst den Ionenstrom und sendet die Daten an einen Computer. Mit Hilfe eine Software (in unserem Fall ein LabView-Programm) werden anschließend die Daten ausgewertet.
 
 \myImage[13cm]{img/qme1}{Quadrupolmassenspektrometer (a) Äquipotentiallinien; (b) hyperbolische Elektroden [3]}
 
@@ -89,7 +89,7 @@ Die Differentialgleichungen haben somit zwei Arten von Lösungen. Bei der einen 
 \end{figure}
 
 \subsection{Stabilitätsdiagramme}
-Um die Bewegung der Ionen durch den Quadrupol mathematisch-physikalisch zu beschreiben, benutzt man einen Graphen, in dem man q über a aufträgt (siehe Abb. 3, q entspricht hier b). Das Verhältnis $\frac{a}{q}=\frac{2U}{V}$ hängt nicht von der Masse der Ionen ab. Somit liegen alle Ionen verschiedener Massen im Stabilitätsdiagramm auf einer Geraden die durch den Nullpunkt geht. Variiert man U und V, so verändert man die Steigung der Arbeitsgeraden. Alle a/q-Werte, die stabile Flugbahnen durch den Quadrupol ergeben, liegen in Abb. 3 innerhalb des eingefärbten Feldes. Wird das Verhältnis von $\frac{U}{V}$ erhöht, desto größer wird die Steigung der Arbeitsgeraden und umso keiner wird das q-Intervall ($\Delta b$ in Abb. 3), bis nur noch Ionen einer bestimmten Masse auf stabilen Bahnen durch den Massenfilter zum Detektor gelangen.
+Um die Bewegung der Ionen durch den Quadrupol mathematisch-physikalisch zu beschreiben, benutzt man einen Graphen, in dem man q über a aufträgt (siehe Abb. 3, q entspricht hier b). Das Verhältnis $\frac{a}{q}=\frac{2U}{V}$ hängt nicht von der Masse der Ionen ab. Somit liegen alle Ionen verschiedener Massen im Stabilitätsdiagramm auf einer Geraden die durch den Nullpunkt geht. Variiert man U und V, so verändert man die Steigung der Arbeitsgeraden. Alle a/q-Werte, die stabile Flugbahnen durch den Quadrupol ergeben, liegen in Abb. 3 innerhalb des eingefärbten Feldes. Wird das Verhältnis von $\frac{U}{V}$ erhöht, wird die Steigung der Arbeitsgeraden größer und umso keiner wird das q-Intervall ($\Delta b$ in Abb. 3), bis nur noch Ionen einer bestimmten Masse auf stabilen Bahnen durch den Massenfilter zum Detektor gelangen.
 
 \vspace{1cm}
 
@@ -109,9 +109,9 @@ Um die Massen zu unterscheiden, definiert man die sogenannte Massenauflösung mi
 M = \frac{m}{\Delta m}
 \end{equation} 
 
-wobei $\Delta m$ die kleinste  auflösbare Massendifferenz ist.
+wobei $\Delta m$ die kleinste auflösbare Massendifferenz ist.
 
 \section{Versuchsaufbau}
-Das QMS muss während des Versuchs in einer Vakuum-Kammer sein. Das Vakuum wird durch eine Membran- und einer Turbomolekularpumpe erzeugt. Die Werte für den Druck liefert ein Druck-Messgerät, welches im Rezipienten angeschlossen ist. Die Testgase können über ein Feinriegelventil in den Rezipienten eingelassen werden. In der folgenden Skizze ist der Aufbau schematisch dargestellt:
+Das QMS muss während des Versuchs in einer Vakuum-Kammer sein. Das Vakuum wird durch eine Membran- und einer Turbomolekularpumpe erzeugt. Die Werte für den Druck liefert ein Druck-Messgerät, welches im Rezipienten ist. Die Testgase können über ein Feinriegelventil in den Rezipienten eingelassen werden. In der folgenden Skizze ist der Aufbau schematisch dargestellt:
 
 \myImage[6cm]{img/aufbau}{Experimenteller Aufbau [3]}
